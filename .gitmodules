@@ -1,0 +1,3 @@
+[submodule "ochadoop"]
+	path = ochadoop
+	url = https://github.com/asiainfo-linkage/ochadoop.git
