@@ -4,6 +4,3 @@
 [submodule "incubator-phoenix"]
 	path = incubator-phoenix
 	url = https://github.com/apache/incubator-phoenix.git
-[submodule "forcedotcom-phoenix"]
-	path = forcedotcom-phoenix
-	url = https://github.com/forcedotcom/phoenix.git
