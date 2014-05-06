@@ -1,3 +1,6 @@
 [submodule "ochadoop"]
 	path = ochadoop
 	url = https://github.com/asiainfo-linkage/ochadoop.git
+[submodule "incubator-phoenix"]
+	path = incubator-phoenix
+	url = https://github.com/apache/incubator-phoenix.git
