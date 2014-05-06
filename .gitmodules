@@ -4,3 +4,6 @@
 [submodule "incubator-phoenix"]
 	path = incubator-phoenix
 	url = https://github.com/apache/incubator-phoenix.git
+[submodule "squirrel-sql"]
+	path = squirrel-sql
+	url = http://git.code.sf.net/p/squirrel-sql/git

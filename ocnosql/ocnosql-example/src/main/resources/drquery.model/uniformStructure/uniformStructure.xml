@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uniformStructure>
+	<field name="APPNAME" index="1" />
+    <field name="FLOW" index="2" />
+    <field name="PHONE_NO" index="3" />
+    <field name="START_TIME" index="4" />
+</uniformStructure>

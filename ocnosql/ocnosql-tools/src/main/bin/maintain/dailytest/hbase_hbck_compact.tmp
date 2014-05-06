@@ -1,0 +1,281 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+13/12/12 17:22:59 WARN conf.Configuration: fs.default.name is deprecated. Instead, use fs.defaultFS
+13/12/12 17:22:59 WARN conf.Configuration: fs.default.name is deprecated. Instead, use fs.defaultFS
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:host.name=ocdata05
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:java.version=1.7.0_21
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:java.vendor=Oracle Corporation
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:java.home=/home/ocnosql/cdh42/jdk7/jre
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:java.class.path=/home/ocnosql/cdh42/hbase-0.94.12-security/conf:/home/ocnosql/cdh42/jdk7/lib/tools.jar:/home/ocnosql/cdh42/hbase-0.94.12-security:/home/ocnosql/cdh42/hbase-0.94.12-security/hbase-0.94.12-security.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/hbase-0.94.12-security-tests.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/activation-1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/aopalliance-1.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/asm-3.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/aspectjrt-1.6.5.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/avro-1.5.3.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/avro-ipc-1.5.3.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-beanutils-1.7.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-beanutils-core-1.8.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-cli-1.2.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-codec-1.4.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-collections-3.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-configuration-1.6.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-daemon-1.0.3.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-digester-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-el-1.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-httpclient-3.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-io-2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-lang-2.5.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-logging-1.1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-logging-api-1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-math-2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/commons-net-3.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/core-3.1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/gmbal-api-only-3.0.0-b023.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/grizzly-framework-2.1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/grizzly-framework-2.1.1-tests.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/grizzly-http-2.1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/grizzly-http-server-2.1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/grizzly-http-servlet-2.1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/grizzly-rcm-2.1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/guava-11.0.2.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/guice-3.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/guice-servlet-3.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-annotations-2.0.0-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-ant-2.0.0-mr1-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-auth-2.0.0-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-common-2.0.0-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-common-2.0.0-cdh4.2.1-tests.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-core-2.0.0-mr1-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-examples-2.0.0-mr1-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-hdfs-2.0.0-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-mapreduce-client-core-2.0.0-cdh4.3.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-test-2.0.0-mr1-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/hadoop-tools-2.0.0-mr1-cdh4.2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/high-scale-lib-1.1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/httpclient-4.1.2.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/httpcore-4.1.3.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jackson-core-asl-1.8.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jackson-jaxrs-1.8.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jackson-mapper-asl-1.8.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jackson-xc-1.8.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jamon-runtime-2.3.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jasper-compiler-5.5.23.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jasper-runtime-5.5.23.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/javax.inject-1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/javax.servlet-3.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jaxb-api-2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jaxb-impl-2.2.3-1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jdiff-1.0.9.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jersey-client-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jersey-core-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jersey-grizzly2-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jersey-guice-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jersey-json-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jersey-server-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jersey-test-framework-core-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jersey-test-framework-grizzly2-1.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jets3t-0.6.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jettison-1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jetty-6.1.26.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jetty-util-6.1.26.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jruby-complete-1.6.5.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jsch-0.1.42.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/json-simple-1.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jsp-2.1-6.1.14.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jsp-api-2.1-6.1.14.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jsp-api-2.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/jsr305-1.3.9.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/junit-4.10-HBASE-1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/kfs-0.3.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/libthrift-0.8.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/log4j-1.2.16.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/management-api-3.0.0-b012.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/metrics-core-2.1.2.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/netty-3.2.4.Final.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/oro-2.0.8.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/phoenix-2.1.0.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/protobuf-java-2.4.0a.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/servlet-api-2.5-6.1.14.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/servlet-api-2.5.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/slf4j-api-1.6.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/slf4j-log4j12-1.6.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/snappy-java-1.0.3.2.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/stax-api-1.0.1.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/velocity-1.7.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/xmlenc-0.52.jar:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/zookeeper-3.4.5.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/conf:/home/ocnosql/cdh42/jdk7/lib/tools.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/hadoop-core-2.0.0-mr1-cdh4.2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/activation-1.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/ant-contrib-1.0b3.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/asm-3.2.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/aspectjrt-1.6.5.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/aspectjtools-1.6.5.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/avro-1.7.3.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/avro-compiler-1.7.3.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-beanutils-1.7.0.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-beanutils-core-1.8.0.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-cli-1.2.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-codec-1.4.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-collections-3.2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-configuration-1.6.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-digester-1.8.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-el-1.0.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-httpclient-3.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-io-2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-lang-2.5.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-logging-1.1.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-math-2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/commons-net-3.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/dom4j-1.6.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/guava-11.0.2.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/hadoop-annotations-2.0.0-cdh4.2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/hadoop-auth-2.0.0-cdh4.2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/hadoop-common-2.0.0-cdh4.2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/hadoop-common-2.0.0-cdh4.2.1-tests.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/hadoop-hdfs-2.0.0-cdh4.2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/hsqldb-1.8.0.10.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jackson-core-asl-1.8.8.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jackson-jaxrs-1.8.8.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jackson-mapper-asl-1.8.8.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jackson-xc-1.8.8.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jasper-compiler-5.5.23.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jasper-runtime-5.5.23.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jaxb-api-2.2.2.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jaxb-impl-2.2.3-1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jersey-core-1.8.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jersey-json-1.8.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jersey-server-1.8.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jets3t-0.6.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jettison-1.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jetty-6.1.26.cloudera.2.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jetty-util-6.1.26.cloudera.2.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jline-0.9.94.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jsch-0.1.42.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jsp-api-2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jsr305-1.3.9.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/junit-4.8.2.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/kfs-0.2.2.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/kfs-0.3.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/log4j-1.2.17.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/mockito-all-1.8.5.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/ocnosql-client-V01B06C00.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/ocnosql-common-V01B06C00.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/paranamer-2.3.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/protobuf-java-2.4.0a.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/servlet-api-2.5.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/slf4j-api-1.6.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/slf4j-log4j12-1.6.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/snappy-java-1.0.4.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/spring-core-3.0.3.RELEASE.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/stax-api-1.0.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/xmlenc-0.52.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/zookeeper-3.4.5-cdh4.2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jsp-2.1/jsp-2.1.jar:/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/jsp-2.1/jsp-api-2.1.jar
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:java.library.path=/home/ocnosql/cdh42/hadoop-2.0.0-mr1-cdh4.2.1/lib/native/Linux-amd64-64:/home/ocnosql/cdh42/hbase-0.94.12-security/lib/native/Linux-amd64-64
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:os.name=Linux
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:os.arch=amd64
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:os.version=2.6.18-194.el5
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:user.name=ocnosql
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:user.home=/home/ocnosql
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Client environment:user.dir=/home/ocnosql/cdh42/dailyTest
+13/12/12 17:22:59 INFO zookeeper.ZooKeeper: Initiating client connection, connectString=ocdata06:2485,ocdata05:2485,ocdata07:2485 sessionTimeout=360000 watcher=hconnection
+13/12/12 17:22:59 INFO zookeeper.RecoverableZooKeeper: The identifier of this process is 22501@ocdata05
+13/12/12 17:22:59 INFO zookeeper.ClientCnxn: Opening socket connection to server ocdata05/10.1.253.95:2485. Will not attempt to authenticate using SASL (unknown error)
+13/12/12 17:22:59 INFO zookeeper.ClientCnxn: Socket connection established to ocdata05/10.1.253.95:2485, initiating session
+13/12/12 17:22:59 INFO zookeeper.ClientCnxn: Session establishment complete on server ocdata05/10.1.253.95:2485, sessionid = 0x142e4a0936600f8, negotiated timeout = 40000
+13/12/12 17:22:59 WARN conf.Configuration: hadoop.native.lib is deprecated. Instead, use io.native.lib.available
+13/12/12 17:22:59 DEBUG client.HConnectionManager$HConnectionImplementation: Looked up root region location, connection=org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation@7e733e1; serverName=ocdata09,60327,1386832054094
+13/12/12 17:22:59 DEBUG client.HConnectionManager$HConnectionImplementation: Cached location for .META.,,1.1028785192 is ocdata09:60327
+Version: 0.94.12
+13/12/12 17:22:59 INFO util.HBaseFsck: Loading regionsinfo from the .META. table
+13/12/12 17:22:59 DEBUG client.HConnectionManager$HConnectionImplementation: Looked up root region location, connection=org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation@7e733e1; serverName=ocdata09,60327,1386832054094
+13/12/12 17:22:59 DEBUG client.MetaScanner: Scanning -ROOT- starting at row= for max=2147483647 rows using org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation@7e733e1
+13/12/12 17:22:59 DEBUG client.HConnectionManager$HConnectionImplementation: Looked up root region location, connection=org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation@7e733e1; serverName=ocdata09,60327,1386832054094
+13/12/12 17:22:59 DEBUG client.MetaScanner: Scanning .META. starting at row= for max=2147483647 rows using org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation@7e733e1
+
+13/12/12 17:22:59 INFO util.HBaseFsck: getHTableDescriptors == tableNames => [MYTEST_NEW20140106, mytest20140102, MYTEST20140103, MYTEST_NEW20140107, MYTEST20140102, JINGJING11, MYTEST_NEW20140102, MYTEST_NEW20140105, MYTEST_NEW20140103, test20140101, SYSTEM.TABLE, JINGJING120140101, MYTEST_NEW20140110, MYTEST_NEW20140109, MYTEST_NEW20140104, MYTEST20140101, MYTEST_NEW20140108, mytest20140101, MYTEST_NEW20140111, TEST20140101, JINGJING20140101, MYTEST_NEW20140101]
+13/12/12 17:22:59 WARN conf.Configuration: fs.default.name is deprecated. Instead, use fs.defaultFS
+Number of Tables: 22
+Number of live region servers: 3
+Number of dead region servers: 0
+Master: ocdata05,60000,1386832052886
+Number of backup masters: 1
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/-ROOT-
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/.META.
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/.hbase-snapshot
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/.logs
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/.oldlogs
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/.tmp
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/JINGJING11
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/JINGJING120140101
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/JINGJING20140101
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST20140101
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST20140102
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST20140103
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140101
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140102
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140103
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140104
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140105
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140106
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140107
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140108
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140109
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140110
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/MYTEST_NEW20140111
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/SYSTEM.TABLE
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/TEST20140101
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/hbase.id
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/mytest20140101
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/mytest20140102
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region dirs from hdfs://cluster-bj/hbase/test20140101
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/.META./1028785192
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/-ROOT-/70236052
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/JINGJING11/4524f153eabbe884fc79d3f84329d51b
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/JINGJING120140101/6d1f61ba2174d75c227741096dd23463
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/JINGJING20140101/e2c14a135b530bb8c5849ca1b5afaa84
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST20140102/3dd871b47e37f92371e9e56e68458fea
+13/12/12 17:22:59 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST20140101/a20dd077aa69b9b66f3543bbce17b4ed
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140101/11c82b3bc1e6a73f2e227cd49b2db0d8
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140102/074d2d238005b6174140ad01c08b2f61
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST20140103/257e47197a51df3d1bde07cecc56aee5
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140109/11e65bfd78df2e7e8eb5a07293551e57
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140103/53f1e96692fa7c964f7940d1c30de50e
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140104/070502ad9f655a68eab691e4474e8c48
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/SYSTEM.TABLE/6054a9b69dd691cb92156b22388390af
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140107/365b914ab552fd3dd0946327b7d6bbaf
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140110/54f14f6c05af93e1f7c62ccd0ab1b0ad
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140105/27bae5fdac8c07f8e687409567d2f184
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/mytest20140102/1ab1e4d5d526cda3a52f3403adbd3b9b
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/TEST20140101/d5e30ae44bf8a9fecc403ffb4a896fff
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140108/4160807ce78fef77a8853e1c00e75fa9
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140106/15485d8e16ec6ba465fee8bb36143186
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/test20140101/46f72633b15dd2617825b9a566f95b37
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140111/3eac48f8458bb6c490b0389e22bb9c18
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140102/4c74219baba122e8fc0fe4c341ce41cf
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140110/74c1efc9b556dd3d7c4ea52c4969306c
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140101/42cb311632291e73f6f694bf7dd54e37
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140103/5b9f8197ba393df9c5dae00a852524a1
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/test20140101/4a6ce466bf35891eb439ab9806cef87f
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140104/7e0226b879e48e32e494bcd818c9cec3
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/mytest20140101/87d2f7920ed844aa478ceb80c2c34eae
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140110/aa7cc94686e18ef096afb31ebfb3f53a
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/mytest20140102/9f469cae7d62c2f716c6e4b062294ec1
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140107/39c3897412f82a8a0d9d61019189f104
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/test20140101/5beb0ab04ad6c3a8bf3f5c38625cf761
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140104/9de9906e26dcffb082928f228204f79e
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140103/7de36ad761527da8e10e479f8f1870b5
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140106/3a52f9ddc3ce0721d7cf6cf024960efd
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140101/6a6c3a6f3ebe678120f1f341465f7bdf
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140102/872d08910bdbafd981a349ab6d9d1d75
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140109/7c00ecce2fa4a8acb01736dcbd0c14e3
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140108/67605982b1f21c94e31580dc576780d2
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140110/b8a6c9f423b6adf31c1871f2ffce2ec1
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140105/52d45c9586921306858e6be97acb3a12
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/mytest20140101/c279b70473cf0e12f96152d5389a0bbb
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140104/ad1e9d1df76694c7f2bac905d48989d3
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140107/49f966056c09153754e56f8a5990a3db
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/test20140101/aa9d0711c4517bfb7c51a51b1b810709
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140105/647e1507daf999cf90aefb87ce0f9cf2
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140111/4f8ef562849435aeda21aa4d4bc07c5e
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140102/e42fa9944e4cae1463725075c207c5df
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140108/787e8737f0b193bae46b96e03ff22c66
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/mytest20140101/e7ce85696cec45e8d65b56eb81477bc2
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140101/e980e841bd3444a411bbb44b722ac39a
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140103/f55c1be211d3e5cb56897b28928bcd32
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140106/7b523a060ec5b7270303bb990850e8cb
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140109/8777c4a7107a292680ed9b067c809146
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140107/bc20ebe29c422e79d1758f9b17d43760
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140105/aad5682a2177026d86648dbb5db84e03
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/mytest20140102/ba9d6a6a538e2eaa241cb0dc3031c27d
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140108/acb623516476049093ead28cf40f66b9
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140111/6c6c185d4bfd32c34b0d88231c0e6d03
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140106/94affe40e4a2476553cc6cd20ea1e363
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140109/ac861cc8d5b12d9347880bfa16eb0dde
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/mytest20140101/ff6af63bc8f96e72d6d61b3e6434a4c0
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/mytest20140102/eab036fdade377fd150a9137e5af48bd
+13/12/12 17:23:00 DEBUG util.HBaseFsck: Loading region info from hdfs:hdfs://cluster-bj/hbase/MYTEST_NEW20140111/d59a2b226111cb93a55e964b19977bc6
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'mytest20140101,00,1386836468021.87d2f7920ed844aa478ceb80c2c34eae.', STARTKEY => '00', ENDKEY => '80', ENCODED => 87d2f7920ed844aa478ceb80c2c34eae,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140106,ff,1386836955321.94affe40e4a2476553cc6cd20ea1e363.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 94affe40e4a2476553cc6cd20ea1e363,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140105,,1386836885356.52d45c9586921306858e6be97acb3a12.', STARTKEY => '', ENDKEY => '00', ENCODED => 52d45c9586921306858e6be97acb3a12,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140104,ff,1386836815793.070502ad9f655a68eab691e4474e8c48.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 070502ad9f655a68eab691e4474e8c48,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST20140103,,1386836566527.257e47197a51df3d1bde07cecc56aee5.', STARTKEY => '', ENDKEY => '', ENCODED => 257e47197a51df3d1bde07cecc56aee5,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140104,,1386836815792.9de9906e26dcffb082928f228204f79e.', STARTKEY => '', ENDKEY => '00', ENCODED => 9de9906e26dcffb082928f228204f79e,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140103,00,1386836745977.5b9f8197ba393df9c5dae00a852524a1.', STARTKEY => '00', ENDKEY => '80', ENCODED => 5b9f8197ba393df9c5dae00a852524a1,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140101,00,1386836611178.42cb311632291e73f6f694bf7dd54e37.', STARTKEY => '00', ENDKEY => '80', ENCODED => 42cb311632291e73f6f694bf7dd54e37,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140110,,1386837240075.74c1efc9b556dd3d7c4ea52c4969306c.', STARTKEY => '', ENDKEY => '00', ENCODED => 74c1efc9b556dd3d7c4ea52c4969306c,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST20140102,,1386836540669.3dd871b47e37f92371e9e56e68458fea.', STARTKEY => '', ENDKEY => '', ENCODED => 3dd871b47e37f92371e9e56e68458fea,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140108,80,1386837101129.67605982b1f21c94e31580dc576780d2.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => 67605982b1f21c94e31580dc576780d2,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140102,,1386836675854.4c74219baba122e8fc0fe4c341ce41cf.', STARTKEY => '', ENDKEY => '00', ENCODED => 4c74219baba122e8fc0fe4c341ce41cf,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140104,00,1386836815792.7e0226b879e48e32e494bcd818c9cec3.', STARTKEY => '00', ENDKEY => '80', ENCODED => 7e0226b879e48e32e494bcd818c9cec3,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140107,ff,1386837029957.365b914ab552fd3dd0946327b7d6bbaf.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 365b914ab552fd3dd0946327b7d6bbaf,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140102,80,1386836675854.074d2d238005b6174140ad01c08b2f61.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => 074d2d238005b6174140ad01c08b2f61,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST20140101,,1386836472359.a20dd077aa69b9b66f3543bbce17b4ed.', STARTKEY => '', ENDKEY => '', ENCODED => a20dd077aa69b9b66f3543bbce17b4ed,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => '-ROOT-,,0', STARTKEY => '', ENDKEY => '', ENCODED => 70236052,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140105,80,1386836885356.647e1507daf999cf90aefb87ce0f9cf2.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => 647e1507daf999cf90aefb87ce0f9cf2,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140108,ff,1386837101129.787e8737f0b193bae46b96e03ff22c66.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 787e8737f0b193bae46b96e03ff22c66,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'SYSTEM.TABLE,,1386833403903.6054a9b69dd691cb92156b22388390af.', STARTKEY => '', ENDKEY => '', ENCODED => 6054a9b69dd691cb92156b22388390af,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140109,ff,1386837170248.ac861cc8d5b12d9347880bfa16eb0dde.', STARTKEY => 'ff', ENDKEY => '', ENCODED => ac861cc8d5b12d9347880bfa16eb0dde,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140107,80,1386837029957.bc20ebe29c422e79d1758f9b17d43760.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => bc20ebe29c422e79d1758f9b17d43760,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140101,80,1386836611178.11c82b3bc1e6a73f2e227cd49b2db0d8.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => 11c82b3bc1e6a73f2e227cd49b2db0d8,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'mytest20140102,,1386836536148.1ab1e4d5d526cda3a52f3403adbd3b9b.', STARTKEY => '', ENDKEY => '00', ENCODED => 1ab1e4d5d526cda3a52f3403adbd3b9b,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140111,00,1386837309662.6c6c185d4bfd32c34b0d88231c0e6d03.', STARTKEY => '00', ENDKEY => '80', ENCODED => 6c6c185d4bfd32c34b0d88231c0e6d03,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140111,ff,1386837309663.3eac48f8458bb6c490b0389e22bb9c18.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 3eac48f8458bb6c490b0389e22bb9c18,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'test20140101,00,1386835216348.4a6ce466bf35891eb439ab9806cef87f.', STARTKEY => '00', ENDKEY => '80', ENCODED => 4a6ce466bf35891eb439ab9806cef87f,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => '.META.,,1', STARTKEY => '', ENDKEY => '', ENCODED => 1028785192,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140103,ff,1386836745977.7de36ad761527da8e10e479f8f1870b5.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 7de36ad761527da8e10e479f8f1870b5,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140111,80,1386837309662.4f8ef562849435aeda21aa4d4bc07c5e.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => 4f8ef562849435aeda21aa4d4bc07c5e,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140108,00,1386837101129.4160807ce78fef77a8853e1c00e75fa9.', STARTKEY => '00', ENDKEY => '80', ENCODED => 4160807ce78fef77a8853e1c00e75fa9,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140105,ff,1386836885356.aad5682a2177026d86648dbb5db84e03.', STARTKEY => 'ff', ENDKEY => '', ENCODED => aad5682a2177026d86648dbb5db84e03,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'JINGJING11,,1386834092070.4524f153eabbe884fc79d3f84329d51b.', STARTKEY => '', ENDKEY => '', ENCODED => 4524f153eabbe884fc79d3f84329d51b,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140109,80,1386837170248.11e65bfd78df2e7e8eb5a07293551e57.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => 11e65bfd78df2e7e8eb5a07293551e57,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140106,00,1386836955321.3a52f9ddc3ce0721d7cf6cf024960efd.', STARTKEY => '00', ENDKEY => '80', ENCODED => 3a52f9ddc3ce0721d7cf6cf024960efd,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140103,80,1386836745977.f55c1be211d3e5cb56897b28928bcd32.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => f55c1be211d3e5cb56897b28928bcd32,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140106,,1386836955320.15485d8e16ec6ba465fee8bb36143186.', STARTKEY => '', ENDKEY => '00', ENCODED => 15485d8e16ec6ba465fee8bb36143186,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140109,,1386837170248.7c00ecce2fa4a8acb01736dcbd0c14e3.', STARTKEY => '', ENDKEY => '00', ENCODED => 7c00ecce2fa4a8acb01736dcbd0c14e3,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'JINGJING120140101,,1386833826749.6d1f61ba2174d75c227741096dd23463.', STARTKEY => '', ENDKEY => '', ENCODED => 6d1f61ba2174d75c227741096dd23463,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140103,,1386836745977.53f1e96692fa7c964f7940d1c30de50e.', STARTKEY => '', ENDKEY => '00', ENCODED => 53f1e96692fa7c964f7940d1c30de50e,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140106,80,1386836955321.7b523a060ec5b7270303bb990850e8cb.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => 7b523a060ec5b7270303bb990850e8cb,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140107,00,1386837029956.49f966056c09153754e56f8a5990a3db.', STARTKEY => '00', ENDKEY => '80', ENCODED => 49f966056c09153754e56f8a5990a3db,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140101,ff,1386836611178.6a6c3a6f3ebe678120f1f341465f7bdf.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 6a6c3a6f3ebe678120f1f341465f7bdf,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'test20140101,,1386835216348.5beb0ab04ad6c3a8bf3f5c38625cf761.', STARTKEY => '', ENDKEY => '00', ENCODED => 5beb0ab04ad6c3a8bf3f5c38625cf761,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140110,ff,1386837240075.aa7cc94686e18ef096afb31ebfb3f53a.', STARTKEY => 'ff', ENDKEY => '', ENCODED => aa7cc94686e18ef096afb31ebfb3f53a,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140110,00,1386837240075.54f14f6c05af93e1f7c62ccd0ab1b0ad.', STARTKEY => '00', ENDKEY => '80', ENCODED => 54f14f6c05af93e1f7c62ccd0ab1b0ad,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'test20140101,ff,1386835216348.46f72633b15dd2617825b9a566f95b37.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 46f72633b15dd2617825b9a566f95b37,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'mytest20140102,ff,1386836536149.9f469cae7d62c2f716c6e4b062294ec1.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 9f469cae7d62c2f716c6e4b062294ec1,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140109,00,1386837170248.8777c4a7107a292680ed9b067c809146.', STARTKEY => '00', ENDKEY => '80', ENCODED => 8777c4a7107a292680ed9b067c809146,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140105,00,1386836885356.27bae5fdac8c07f8e687409567d2f184.', STARTKEY => '00', ENDKEY => '80', ENCODED => 27bae5fdac8c07f8e687409567d2f184,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140110,80,1386837240075.b8a6c9f423b6adf31c1871f2ffce2ec1.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => b8a6c9f423b6adf31c1871f2ffce2ec1,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140102,ff,1386836675854.872d08910bdbafd981a349ab6d9d1d75.', STARTKEY => 'ff', ENDKEY => '', ENCODED => 872d08910bdbafd981a349ab6d9d1d75,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'test20140101,80,1386835216348.aa9d0711c4517bfb7c51a51b1b810709.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => aa9d0711c4517bfb7c51a51b1b810709,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140107,,1386837029956.39c3897412f82a8a0d9d61019189f104.', STARTKEY => '', ENDKEY => '00', ENCODED => 39c3897412f82a8a0d9d61019189f104,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'mytest20140101,,1386836468021.c279b70473cf0e12f96152d5389a0bbb.', STARTKEY => '', ENDKEY => '00', ENCODED => c279b70473cf0e12f96152d5389a0bbb,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140111,,1386837309662.d59a2b226111cb93a55e964b19977bc6.', STARTKEY => '', ENDKEY => '00', ENCODED => d59a2b226111cb93a55e964b19977bc6,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140102,00,1386836675854.e42fa9944e4cae1463725075c207c5df.', STARTKEY => '00', ENDKEY => '80', ENCODED => e42fa9944e4cae1463725075c207c5df,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140108,,1386837101129.acb623516476049093ead28cf40f66b9.', STARTKEY => '', ENDKEY => '00', ENCODED => acb623516476049093ead28cf40f66b9,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'TEST20140101,,1386835702846.d5e30ae44bf8a9fecc403ffb4a896fff.', STARTKEY => '', ENDKEY => '', ENCODED => d5e30ae44bf8a9fecc403ffb4a896fff,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'mytest20140101,ff,1386836468022.ff6af63bc8f96e72d6d61b3e6434a4c0.', STARTKEY => 'ff', ENDKEY => '', ENCODED => ff6af63bc8f96e72d6d61b3e6434a4c0,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'JINGJING20140101,,1386833408053.e2c14a135b530bb8c5849ca1b5afaa84.', STARTKEY => '', ENDKEY => '', ENCODED => e2c14a135b530bb8c5849ca1b5afaa84,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'mytest20140101,80,1386836468022.e7ce85696cec45e8d65b56eb81477bc2.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => e7ce85696cec45e8d65b56eb81477bc2,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'mytest20140102,00,1386836536149.eab036fdade377fd150a9137e5af48bd.', STARTKEY => '00', ENDKEY => '80', ENCODED => eab036fdade377fd150a9137e5af48bd,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140104,80,1386836815793.ad1e9d1df76694c7f2bac905d48989d3.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => ad1e9d1df76694c7f2bac905d48989d3,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'mytest20140102,80,1386836536149.ba9d6a6a538e2eaa241cb0dc3031c27d.', STARTKEY => '80', ENDKEY => 'ff', ENCODED => ba9d6a6a538e2eaa241cb0dc3031c27d,}
+13/12/12 17:23:00 DEBUG util.HBaseFsck: HRegionInfo read: {NAME => 'MYTEST_NEW20140101,,1386836611178.e980e841bd3444a411bbb44b722ac39a.', STARTKEY => '', ENDKEY => '00', ENCODED => e980e841bd3444a411bbb44b722ac39a,}
+Number of empty REGIONINFO_QUALIFIER rows in .META.: 0
+13/12/12 17:23:00 DEBUG util.HBaseFsck: There are 66 region info entries
+Summary:
+  -ROOT- is okay.
+    Number of regions: 1
+    Deployed on:  ocdata09,60327,1386832054094
+  .META. is okay.
+    Number of regions: 1
+    Deployed on:  ocdata09,60327,1386832054094
+  JINGJING11 is okay.
+    Number of regions: 1
+    Deployed on:  ocdata09,60327,1386832054094
+  JINGJING120140101 is okay.
+    Number of regions: 1
+    Deployed on:  ocdata07,60327,1386832053986
+  JINGJING20140101 is okay.
+    Number of regions: 1
+    Deployed on:  ocdata06,60327,1386832054044
+  MYTEST20140101 is okay.
+    Number of regions: 1
+    Deployed on:  ocdata07,60327,1386832053986
+  MYTEST20140102 is okay.
+    Number of regions: 1
+    Deployed on:  ocdata06,60327,1386832054044
+  MYTEST20140103 is okay.
+    Number of regions: 1
+    Deployed on:  ocdata09,60327,1386832054094
+  MYTEST_NEW20140101 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140102 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140103 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140104 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140105 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140106 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140107 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140108 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140109 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140110 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  MYTEST_NEW20140111 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  SYSTEM.TABLE is okay.
+    Number of regions: 1
+    Deployed on:  ocdata06,60327,1386832054044
+  TEST20140101 is okay.
+    Number of regions: 1
+    Deployed on:  ocdata07,60327,1386832053986
+  mytest20140101 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  mytest20140102 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+  test20140101 is okay.
+    Number of regions: 4
+    Deployed on:  ocdata06,60327,1386832054044 ocdata07,60327,1386832053986 ocdata09,60327,1386832054094
+0 inconsistencies detected.
+Status: OK

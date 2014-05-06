@@ -1,0 +1,12 @@
+select count(1) from SMS_20131021;
+select count(*) from SMS_20131021 WHERE TEL_NUM like '%13482069%';
+select count(*) from SMS_20131021 WHERE TEL_NUM like '%13482069%' and SUBSTR(A3,1,10)>'2013021510';
+select A3,A11 from SMS_20131021 order by TEL_NUM LIMIT 10;
+select A3,A11 from SMS_20131021 order by TEL_NUM DESC LIMIT 10;
+select A3,A11,TEL_NUM from SMS_20131021 where TEL_NUM LIKE '%1348206%' order by TEL_NUM DESC LIMIT 10;
+select A3,A11,TEL_NUM from SMS_20131021 where TEL_NUM LIKE '%1348206%' order by TEL_NUM ASC LIMIT 10;
+select A3,count(1) from SMS_20131021 where TEL_NUM LIKE '%1348206%' group by A3 having count(1) >1;
+select A3,count(1) from SMS_20131021 where A3 > '20130215102100' AND A3 < '20130215102900' and TEL_NUM LIKE '%1348%' group by A3 having count(1) >1;
+
+select * from SMS_20131021 WHERE TEL_NUM='00013482069229';
+

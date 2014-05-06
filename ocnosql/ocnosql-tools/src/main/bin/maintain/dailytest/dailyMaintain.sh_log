@@ -1,0 +1,36 @@
+#!/bin/bash
+########## hdfs check ##########################
+sh ha_daemon.sh > daily.log 2>&1 &
+########## hdfs check ##########################
+sh fsck.sh > daily.log 2>&1 & 
+######### hbase hbck  #########################
+
+sh hbck.sh > daily.log 2>&1 &
+#sh hbck_24times.sh &
+######### balance hbase ########################
+sh hbase_balance.sh > daily.log 2>&1 &
+######## check zookeeper can be connected ##############
+sh zk_check.sh  > daily.log 2>&1  &
+#######  check if client can connect to cluster ########
+sh clientConToHbaseTest.sh > daily.log 2>&1 &
+#
+#sh compact_log.sh > daily.log 2>&1 &
+########## compact all table ##################
+#sh compact.sh  &
+######### delete HDFS directory and file ####
+#deleteHDFSemptyDirs.sh   /tmp/yujing 4320 &
+#deleteHDFSfile.sh       /tmp/yujing/file 4320  &
+######### delete local dir 
+#sh deleteLocalDirFile.sh   /tmp 4320  &
+##############  
+sh jstat_monitor.sh  blocked HMaster  > daily.log 2>&1 &
+sh jstat_monitor.sh  blocked DataNode > daily.log 2>&1 &
+sh jstat_monitor.sh  blocked NameNode > daily.log 2>&1 &
+#################### create table if tommorow is 01 ##############
+date=`date +%d`
+tommorrow=` date -d 'tomorrow' +%d`
+if [ tomorrow'a' == '01a' ];then
+		sh ./ocnosql-tools-V01B05C00/bin/ocnosql_generator.sh DRQUERY_ F 100
+fi
+################## snapshot all table #########################
+#sh snapshot.sh &

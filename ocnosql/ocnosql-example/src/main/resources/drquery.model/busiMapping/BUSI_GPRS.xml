@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model modelId="GPRS" name="GRPS详单" process="jfProcess" table="dr_query">
+    <field index="1" name="APPNAME" type="string" cname="应用名称" commonField="true"/>
+    <field index="2" name="FLOW" type="string" cname="消耗流量" commonField="true"/>
+    <field index="3" name="PHONE_NO" type="string" cname="电话号码" commonField="true" />
+    <field index="4" name="START_TIME" type="string" cname="开始时间" commonField="true" />
+</model>

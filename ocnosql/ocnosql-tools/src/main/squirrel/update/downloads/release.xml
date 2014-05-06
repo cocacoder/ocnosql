@@ -1,0 +1,2460 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_29" class="java.beans.XMLDecoder"> 
+ <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ChannelXmlBean"> 
+  <void property="currentRelease"> 
+   <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ReleaseXmlBean"> 
+    <void property="modules"> 
+     <void method="add"> 
+      <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ModuleXmlBean"> 
+       <void property="artifacts"> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3549341578</long> 
+          </void> 
+          <void property="name"> 
+           <string>x86.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1997851</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3896601724</long> 
+          </void> 
+          <void property="name"> 
+           <string>hibernate-entitymanager.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>116544</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1663336707</long> 
+          </void> 
+          <void property="name"> 
+           <string>antlr.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>435563</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3299800097</long> 
+          </void> 
+          <void property="name"> 
+           <string>jcommon.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>506386</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1632311145</long> 
+          </void> 
+          <void property="name"> 
+           <string>axis-jaxrpc.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>32071</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1538813720</long> 
+          </void> 
+          <void property="name"> 
+           <string>axis.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1599495</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1539939487</long> 
+          </void> 
+          <void property="name"> 
+           <string>fw.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1154495</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>341083730</long> 
+          </void> 
+          <void property="name"> 
+           <string>stringtemplate.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>229928</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>131534906</long> 
+          </void> 
+          <void property="name"> 
+           <string>rsyntaxtextarea.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>733458</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>919992673</long> 
+          </void> 
+          <void property="name"> 
+           <string>commons-cli.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>41123</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2326840893</long> 
+          </void> 
+          <void property="name"> 
+           <string>spring-core.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>282241</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>901129516</long> 
+          </void> 
+          <void property="name"> 
+           <string>spring-beans.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>478719</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1881320085</long> 
+          </void> 
+          <void property="name"> 
+           <string>commons-discovery.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>71442</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1661102391</long> 
+          </void> 
+          <void property="name"> 
+           <string>commons-collections.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>175426</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>401164000</long> 
+          </void> 
+          <void property="name"> 
+           <string>axis-saaj.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>19427</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2366925555</long> 
+          </void> 
+          <void property="name"> 
+           <string>hibernate-commons-annotations.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>66426</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3281100986</long> 
+          </void> 
+          <void property="name"> 
+           <string>jfreechart.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1461633</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1722379232</long> 
+          </void> 
+          <void property="name"> 
+           <string>spring-context.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>465678</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>787970461</long> 
+          </void> 
+          <void property="name"> 
+           <string>rtext.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1248475</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2197124025</long> 
+          </void> 
+          <void property="name"> 
+           <string>log4j.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>391834</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>451238384</long> 
+          </void> 
+          <void property="name"> 
+           <string>spring-context-support.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>93010</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1577726120</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>2222350</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3112574937</long> 
+          </void> 
+          <void property="name"> 
+           <string>axis-wsdl4j.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>126771</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2188745679</long> 
+          </void> 
+          <void property="name"> 
+           <string>cglib.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>282338</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>4120570730</long> 
+          </void> 
+          <void property="name"> 
+           <string>hibernate-annotations.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>265130</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1856893722</long> 
+          </void> 
+          <void property="name"> 
+           <string>commons-codec.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>46725</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>850843490</long> 
+          </void> 
+          <void property="name"> 
+           <string>org.eclipse.equinox.common.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>101957</long> 
+          </void> 
+          <void property="type"> 
+           <string>eclipse.equinox.common.jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1118066309</long> 
+          </void> 
+          <void property="name"> 
+           <string>jxl.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>743361</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3420158953</long> 
+          </void> 
+          <void property="name"> 
+           <string>commons-logging.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>38015</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3414351084</long> 
+          </void> 
+          <void property="name"> 
+           <string>icu4j.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>5925194</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3563037387</long> 
+          </void> 
+          <void property="name"> 
+           <string>xml-apis.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>109318</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>482166191</long> 
+          </void> 
+          <void property="name"> 
+           <string>common.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>625292</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2463821525</long> 
+          </void> 
+          <void property="name"> 
+           <string>jide-oss.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1641190</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1783551671</long> 
+          </void> 
+          <void property="name"> 
+           <string>treetable.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>35722</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2315176682</long> 
+          </void> 
+          <void property="name"> 
+           <string>osgi.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1122602</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1049092013</long> 
+          </void> 
+          <void property="name"> 
+           <string>commons-lang.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>284220</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>4281830726</long> 
+          </void> 
+          <void property="name"> 
+           <string>jmeld.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>458193</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1586278441</long> 
+          </void> 
+          <void property="name"> 
+           <string>forms.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>86828</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3258006320</long> 
+          </void> 
+          <void property="name"> 
+           <string>autocomplete.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>113709</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2526228326</long> 
+          </void> 
+          <void property="name"> 
+           <string>javahelp.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>562749</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3401183427</long> 
+          </void> 
+          <void property="name"> 
+           <string>nanoxml.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>30183</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1265012766</long> 
+          </void> 
+          <void property="name"> 
+           <string>hibernate.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>2242529</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1057117474</long> 
+          </void> 
+          <void property="name"> 
+           <string>asm.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>26361</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1540577267</long> 
+          </void> 
+          <void property="name"> 
+           <string>asm-attrs.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>16757</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1640872803</long> 
+          </void> 
+          <void property="name"> 
+           <string>commons-httpclient.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>305001</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>994891229</long> 
+          </void> 
+          <void property="name"> 
+           <string>swing-worker.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>12591</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>800936875</long> 
+          </void> 
+          <void property="name"> 
+           <string>core.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>60127</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+       </void> 
+       <void property="name"> 
+        <string>core</string> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ModuleXmlBean"> 
+       <void property="artifacts"> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3859468273</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_ru.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>168859</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2191442704</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_cs_CZ.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>164339</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2208869342</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_pl.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>148376</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>852452227</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_it_IT.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>221325</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>264019670</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_ja_JP.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>53038</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2161738294</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_zh_CN.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>225170</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1675713959</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_pt_BR.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>93717</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3719161223</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_bg_BG.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>111891</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2062116559</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_de_DE.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>139856</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>879291695</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_ko_KR.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>194845</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2102819985</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_fr.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>250656</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2287605155</long> 
+          </void> 
+          <void property="name"> 
+           <string>squirrel-sql_es.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>113799</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+       </void> 
+       <void property="name"> 
+        <string>i18n</string> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ModuleXmlBean"> 
+       <void property="artifacts"> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>628033854</long> 
+          </void> 
+          <void property="name"> 
+           <string>sybase.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>41989</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2877324588</long> 
+          </void> 
+          <void property="name"> 
+           <string>derby.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>243898</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1899999672</long> 
+          </void> 
+          <void property="name"> 
+           <string>oracle.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>356247</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>735432904</long> 
+          </void> 
+          <void property="name"> 
+           <string>sessionscript.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>39501</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2832741507</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlreplace.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>35754</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>34869273</long> 
+          </void> 
+          <void property="name"> 
+           <string>laf.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>5835367</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>260399262</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlscript-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>262033</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1778112116</long> 
+          </void> 
+          <void property="name"> 
+           <string>dbcopy.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>621181</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1209788716</long> 
+          </void> 
+          <void property="name"> 
+           <string>smarttools-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>361810</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2616375592</long> 
+          </void> 
+          <void property="name"> 
+           <string>mysql-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>220567</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>721687140</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlbookmark-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>232264</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>4294198956</long> 
+          </void> 
+          <void property="name"> 
+           <string>postgres.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>645521</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1209788716</long> 
+          </void> 
+          <void property="name"> 
+           <string>smarttools.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>361810</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>4100737178</long> 
+          </void> 
+          <void property="name"> 
+           <string>firebirdmanager-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>528454</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>615142212</long> 
+          </void> 
+          <void property="name"> 
+           <string>editextras.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>92046</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>615142212</long> 
+          </void> 
+          <void property="name"> 
+           <string>editextras-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>92046</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>41587704</long> 
+          </void> 
+          <void property="name"> 
+           <string>refactoring.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1419700</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2957052868</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlparam.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>33916</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1881771117</long> 
+          </void> 
+          <void property="name"> 
+           <string>greenplum.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>25541</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>628033854</long> 
+          </void> 
+          <void property="name"> 
+           <string>sybase-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>41989</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1899999672</long> 
+          </void> 
+          <void property="name"> 
+           <string>oracle-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>356247</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3935537650</long> 
+          </void> 
+          <void property="name"> 
+           <string>netezza.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>410239</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>4294198956</long> 
+          </void> 
+          <void property="name"> 
+           <string>postgres-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>645521</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3768050060</long> 
+          </void> 
+          <void property="name"> 
+           <string>informix-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>394878</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1453725517</long> 
+          </void> 
+          <void property="name"> 
+           <string>hibernate.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>530353</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>975853610</long> 
+          </void> 
+          <void property="name"> 
+           <string>multisource.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>1661511</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2877324588</long> 
+          </void> 
+          <void property="name"> 
+           <string>derby-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>243898</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3677047738</long> 
+          </void> 
+          <void property="name"> 
+           <string>wikiTableConfigurations.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>14127</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2665958285</long> 
+          </void> 
+          <void property="name"> 
+           <string>firebird-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>73731</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>4077079861</long> 
+          </void> 
+          <void property="name"> 
+           <string>h2-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>352375</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3768050060</long> 
+          </void> 
+          <void property="name"> 
+           <string>informix.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>394878</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3935537650</long> 
+          </void> 
+          <void property="name"> 
+           <string>netezza-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>410239</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>484409387</long> 
+          </void> 
+          <void property="name"> 
+           <string>mssql-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>176519</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2566887209</long> 
+          </void> 
+          <void property="name"> 
+           <string>i18n-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>73826</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2038172155</long> 
+          </void> 
+          <void property="name"> 
+           <string>graph.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>814215</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3748984235</long> 
+          </void> 
+          <void property="name"> 
+           <string>syntax-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>324449</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1778112116</long> 
+          </void> 
+          <void property="name"> 
+           <string>dbcopy-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>621181</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>484409387</long> 
+          </void> 
+          <void property="name"> 
+           <string>mssql.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>176519</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>4077079861</long> 
+          </void> 
+          <void property="name"> 
+           <string>h2.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>352375</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>34869273</long> 
+          </void> 
+          <void property="name"> 
+           <string>laf-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>5835367</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>961040530</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlval.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>85709</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2566887209</long> 
+          </void> 
+          <void property="name"> 
+           <string>i18n.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>73826</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>735432904</long> 
+          </void> 
+          <void property="name"> 
+           <string>sessionscript-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>39501</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3415306949</long> 
+          </void> 
+          <void property="name"> 
+           <string>dbdiff.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>359534</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>721687140</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlbookmark.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>232264</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2616375592</long> 
+          </void> 
+          <void property="name"> 
+           <string>mysql.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>220567</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1881771117</long> 
+          </void> 
+          <void property="name"> 
+           <string>greenplum-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>25541</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2038172155</long> 
+          </void> 
+          <void property="name"> 
+           <string>graph-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>814215</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>260399262</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlscript.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>262033</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>52393204</long> 
+          </void> 
+          <void property="name"> 
+           <string>db2.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>620869</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1091755989</long> 
+          </void> 
+          <void property="name"> 
+           <string>codecompletion.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>156481</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>52393204</long> 
+          </void> 
+          <void property="name"> 
+           <string>db2-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>620869</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3677047738</long> 
+          </void> 
+          <void property="name"> 
+           <string>wikiTableConfigurations-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>14127</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3151113740</long> 
+          </void> 
+          <void property="name"> 
+           <string>swingViolations.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>25700</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3748984235</long> 
+          </void> 
+          <void property="name"> 
+           <string>syntax.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>324449</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3622984424</long> 
+          </void> 
+          <void property="name"> 
+           <string>dataimport.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>133841</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>961040530</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlval-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>85709</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>975853610</long> 
+          </void> 
+          <void property="name"> 
+           <string>multisource-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>1661511</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3415306949</long> 
+          </void> 
+          <void property="name"> 
+           <string>dbdiff-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>359534</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1453725517</long> 
+          </void> 
+          <void property="name"> 
+           <string>hibernate-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>530353</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>1091755989</long> 
+          </void> 
+          <void property="name"> 
+           <string>codecompletion-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>156481</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3151113740</long> 
+          </void> 
+          <void property="name"> 
+           <string>swingViolations-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>25700</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2957052868</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlparam-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>33916</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>4100737178</long> 
+          </void> 
+          <void property="name"> 
+           <string>firebirdmanager.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>528454</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>3622984424</long> 
+          </void> 
+          <void property="name"> 
+           <string>dataimport-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>133841</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2665958285</long> 
+          </void> 
+          <void property="name"> 
+           <string>firebird.jar</string> 
+          </void> 
+          <void property="size"> 
+           <long>73731</long> 
+          </void> 
+          <void property="type"> 
+           <string>jar</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>2832741507</long> 
+          </void> 
+          <void property="name"> 
+           <string>sqlreplace-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>35754</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="net.sourceforge.squirrel_sql.client.update.xmlbeans.ArtifactXmlBean"> 
+          <void property="checksum"> 
+           <long>41587704</long> 
+          </void> 
+          <void property="name"> 
+           <string>refactoring-assembly.zip</string> 
+          </void> 
+          <void property="size"> 
+           <long>1419700</long> 
+          </void> 
+          <void property="type"> 
+           <string>zip</string> 
+          </void> 
+          <void property="version"> 
+           <string>3.5.0</string> 
+          </void> 
+         </object> 
+        </void> 
+       </void> 
+       <void property="name"> 
+        <string>plugin</string> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <string>stable</string> 
+    </void> 
+    <void property="version"> 
+     <string>3.5.0</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="name"> 
+   <string>stable</string> 
+  </void> 
+ </object> 
+</java> 

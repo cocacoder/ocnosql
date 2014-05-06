@@ -1,0 +1,28 @@
+<assembly xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/assembly-1.0.0.xsd">
+    <id>package</id>
+    <formats>
+        <format>tar</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/bin/maintain</directory>
+            <outputDirectory>maintain</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/phoenix</directory>
+            <outputDirectory>phoenix-2.1.0</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/squirrel</directory>
+            <outputDirectory>squirrel-sql-3.5.0-standard</outputDirectory>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+</assembly>
