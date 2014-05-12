@@ -1,0 +1,210 @@
+apply plugin: 'java'
+ext {
+    privateRepo = 'http://10.1.253.223:8081/nexus/content/groups/ailk'
+    privateDeployRepo = 'http://10.1.253.223:8081/nexus/content/repositories/ailk-snapshots'
+    forrest_home = System.getProperty('FORREST_HOME', "/home/cloudetl/apache-forrest-0.9")
+    oc_version = 'och2.0.0-SNAPSHOT'
+    ocnosql_version='V01B07C02'
+    zookeeper_version = '3.4.5-cdh4.2.1'
+    hadoop_common_version = '2.0.0-cdh4.2.1'
+    hadoop_common_mr1_version = '2.0.0-mr1-cdh4.2.1'
+    apache_hbase_version = '0.94.12-security'
+    apache_phoenix_version='3.0.0'
+    apache_hive_version = '0.12.0'
+    apache_hive_legacy_version = '0.11.0'
+    amplab_hive_version = '0.11.0-shark-0.9.1'
+    hadoop_lzo_version = '0.4.19'
+    auditor_version = 'och2.0.0-beta'
+    apache_hive_extension_version = '0.12.0-och2.0.0-beta'
+    apache_hive_extension_legacy_version = '0.11.0-och2.0.0-beta'
+}
+
+repositories {
+    maven {
+        url privateRepo
+    }
+}
+configurations {
+    auditor_plugin
+}
+dependencies {
+    auditor_plugin "com.ailk.oci.auditor:auditor-plugin:$auditor_version"
+}
+
+def getFromMaven(src, destDir) {
+    s = src.split("[:@]")
+    srcUrl = "http://10.1.253.223:8081/nexus/service/local/artifact/maven/redirect?r=ailk&g=${s[0]}&a=${s[1]}&v=${s[2]}&e=${s[3]}"
+    ant.echo("downloading:$srcUrl to:$destDir/${s[1]}-${s[2]}.${s[3]}")
+    ant.mkdir(dir: destDir)
+    ant.get(src: srcUrl, dest: "$destDir/${s[1]}-${s[2]}.${s[3]}", verbose: true)
+}
+
+
+task auditor() {
+    doLast {
+        getFromMaven("com.ailk.oci.auditor:auditor-server:$auditor_version@jar", "$buildDir/ochadoop")
+    }
+}
+
+task incubator-phoenix-tar(type: Exec) {
+    workingDir 'incubator-phoenix'
+    commandLine 'mvn',"-T","2C", "clean", 'package',"-Psecurity",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
+}
+
+task incubator-phoenix(dependsOn: [incubator-phoenix-tar]) {
+    doLast {
+        ant.delete(dir: "incubator-phoenix/target/tar")
+        ant.mkdir(dir: "incubator-phoenix/target/tar")
+        ant.copy(file: "incubator-phoenix/phoenix-assembly/target/phoenix-${apache_phoenix_version}-incubating.tar", todir: "incubator-phoenix/target/tar")
+        ant.untar(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating.tar",dest: 'incubator-phoenix/target/tar')
+        ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}")
+        rootdir = "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}"
+        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/bin", tofile: rootdir)
+        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/lib", tofile: rootdir)
+        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/phoenix-3.0.0-incubating-client.jar", tofile: rootdir)
+        //replace with custom changes
+        
+        ant.delete(file: "$rootdir/bin/log4j.properties")
+        ant.delete(file: "$rootdir/bin/hbase-site.xml")
+        
+        ant.copy(file: "ochadoop/apache-hbase-oc/conf/log4j.properties", todir: "$rootdir/bin/")
+        ant.copy(file: "ochadoop/apache-hbase-oc/conf/auditor.client.properties", todir: "$rootdir/bin/")
+        ant.copy(file: "ochadoop/apache-hbase-oc/conf/hbase-site.xml", todir: "$rootdir/bin/")
+        ant.copy(file: "ochadoop/hadoop-common-oc/etc/hadoop/hdfs-site.xml", todir: "$rootdir/bin/")
+
+        ant.mkdir(dir: "$rootdir/auditor")
+        project.copy({
+            into "$rootdir/auditor/lib"
+            from configurations.auditor_plugin
+        })
+        ant.move(file: "$rootdir/auditor/lib/auditor-plugin-${auditor_version}.jar", toFile: "$rootdir/auditor/auditor-plugin-${auditor_version}.jar")
+
+        //end replace
+        ant.tar(basedir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar")
+        ant.gzip(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz")
+        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz")
+    }
+}
+
+task apache_hbase_tar(type: Exec) {
+    workingDir 'ochadoop/apache-hbase'
+    commandLine 'mvn',"-T","2C", "clean", 'package',"-Psecurity",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
+}
+task apache_hbase(dependsOn: [auditor, apache_hbase_tar]) {
+    doLast {
+        ant.delete(dir: 'ochadoop/apache-hbase/target/tar')
+        ant.mkdir(dir: "ochadoop/apache-hbase/target/tar")
+        ant.copy(file: "ochadoop/apache-hbase/target/hbase-${apache_hbase_version}.tar.gz", todir: "ochadoop/apache-hbase/target/tar")
+        ant.gunzip(src: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}.tar.gz")
+        ant.untar(src: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}.tar", dest: 'ochadoop/apache-hbase/target/tar')
+        ant.mkdir(dir: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}")
+        rootdir = "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}"
+        ant.move(file: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}-${ocnosql_version}", tofile: rootdir)
+        //replace with custom changes
+        
+        ant.delete(file: "$rootdir/bin/hbase")
+        ant.delete(file: "$rootdir/conf/log4j.properties")
+        ant.delete(file: "$rootdir/conf/auditor.client.properties")
+        ant.delete(file: "$rootdir/conf/hbase-site.xml")
+        ant.delete(file: "$rootdir/conf/hbase-env.sh")
+        
+        ant.copy(file: "ochadoop/apache-hbase-oc/bin/hbase", todir: "$rootdir/bin/")
+        ant.copy(file: "ochadoop/apache-hbase-oc/conf/log4j.properties", todir: "$rootdir/conf/")
+        ant.copy(file: "ochadoop/apache-hbase-oc/conf/auditor.client.properties", todir: "$rootdir/conf/")
+        ant.copy(file: "ochadoop/apache-hbase-oc/conf/hbase-site.xml", todir: "$rootdir/conf/")
+        ant.copy(file: "ochadoop/apache-hbase-oc/conf/hbase-env.sh", todir: "$rootdir/conf/")
+        ant.copy(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/phoenix-3.0.0-incubating-client.jar",  todir: "$rootdir/lib/")
+        ant.mkdir(dir: "$rootdir/auditor")
+        project.copy({
+            into "$rootdir/auditor/lib"
+            from configurations.auditor_plugin
+        })
+        ant.move(file: "$rootdir/auditor/lib/auditor-plugin-${auditor_version}.jar", toFile: "$rootdir/auditor/auditor-plugin-${auditor_version}.jar")
+
+        //end replace
+        ant.tar(basedir: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}", destfile: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}.tar")
+        ant.gzip(src: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}.tar", destfile: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}.tar.gz")
+        ant.move(file: "ochadoop/apache-hbase/target/tar/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/hbase-${apache_hbase_version}-${oc_version}-${ocnosql_version}.tar.gz")
+    }
+}
+
+task squirrel-sql_clean(type: Exec) {
+    workingDir 'squirrel-sql/sql12'
+    commandLine 'ant','clean'
+}
+task squirrel-sql-tar(type: Exec) {
+    workingDir 'squirrel-sql/sql12'
+    commandLine 'ant'
+}
+task squirrel-sql(dependsOn: [squirrel-sql-tar]) {
+    doLast {
+        ant.delete(dir: 'squirrel-sql/target/zip')
+        ant.mkdir(dir: "squirrel-sql/target/zip")
+        ant.mkdir(dir: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}")
+        rootdir = "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}/squirrel-sql-${squirrel_version}-${ocnosql_version}"
+        ant.move(file: "squirrel-sql/sql12/output/dist/", tofile: rootdir)
+        //replace with custom changes
+        
+        ant.copy(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/lib/phoenix-core-${apache_phoenix_version}-incubating.jar", todir: "$rootdir/lib/")
+       
+
+        ant.mkdir(dir: "$rootdir/auditor")
+        project.copy({
+            into "$rootdir/auditor/lib"
+            from configurations.auditor_plugin
+        })
+        ant.move(file: "$rootdir/auditor/lib/auditor-plugin-${auditor_version}.jar", toFile: "$rootdir/auditor/auditor-plugin-${auditor_version}.jar")
+
+        //end replace
+        ant.zip(basedir: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}", destfile: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}.zip")
+        ant.move(file: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}.zip", tofile: "$buildDir/ocnosql/squirrel-sql-${squirrel_version}-${ocnosql_version}.zip")
+    }
+}
+
+
+task ocnosql-tar(type: Exec) {
+    workingDir 'ocnosql'
+    commandLine 'mvn',"-T","2C", "clean", 'package',"-Psecurity",'-DskipTests', "-Dmaven.javadoc.skip=true"
+}
+
+task ocnosql(dependsOn: [auditor, ocnosql-tar]) {
+    doLast {
+        ant.delete(dir: 'ocnosql/target/tar')
+        ant.mkdir(dir: "ocnosql/target/tar")
+        ant.copy(file: "ocnosql-client/target/ocnosql-client-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
+        ant.copy(file: "ocnosql-common/target/ocnosql-common-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
+        ant.copy(file: "ocnosql-dao/target/ocnosql-dao-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
+        ant.copy(file: "ocnosql-example/target/ocnosql-example-${ocnosql_version}.war", todir: "ocnosql/target/tar")
+        ant.copy(file: "ocnosql-model/target/ocnosql-model-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
+        ant.copy(file: "ocnosql-tools/target/ocnosql-tools-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
+        ant.mkdir(dir: "ocnosql/target/tar/ocnosql-${ocnosql_version}")
+        rootdir = "ocnosql/target/tar/ocnosql-${ocnosql_version}-${ocnosql_version}/ocnosql-${ocnosql_version}-${ocnosql_version}"
+        ant.move(file: "ocnosql/target/tar/hbase-${ocnosql_version}", tofile: rootdir)
+        ant.mkdir(dir: "ocnosql/target/tar/ocnosql-${ocnosql_version}/bin")
+        
+        ant.move(file: "ocnosql/src/main/bin/", tofile: "ocnosql/target/tar/ocnosql-${ocnosql_version}/bin")
+        //replace with custom changes
+        
+        ant.mkdir(dir: "$rootdir/auditor")
+        project.copy({
+            into "$rootdir/auditor/lib"
+            from configurations.auditor_plugin
+        })
+        ant.move(file: "$rootdir/auditor/lib/auditor-plugin-${auditor_version}.jar", toFile: "$rootdir/auditor/auditor-plugin-${auditor_version}.jar")
+
+        //end replace
+        ant.tar(basedir: "ocnosql/target/tar/ocnosql-${ocnosql_version}", destfile: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar")
+        ant.gzip(src: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar", destfile: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar.gz")
+        ant.move(file: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/ocnosql-${ocnosql_version}.tar.gz")
+    }
+} 
+task all(dependsOn: [auditor, apache_hbase , incubator-phoenix , squirrel-sql, ocnosql]) {
+    doLast {
+        ant.mkdir(dir: "build/tar/ocnosql-${ocnosql_version}")
+        ant.move(file: "build/ocnosql", tofile: "build/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
+        ant.tar(basedir: "build/tar/ocnosql-${ocnosql_version}", destfile: "build/tar/ocnosql-${ocnosql_version}.tar")
+        ant.gzip(src: "build/tar/ocnosql-${ocnosql_version}.tar", destfile: "build/tar/ocnosql-${ocnosql_version}.tar.gz")
+    }
+}
+
+
