@@ -46,12 +46,12 @@ task auditor() {
     }
 }
 
-task incubator-phoenix-tar(type: Exec) {
+task incubator_phoenix_tar(type: Exec) {
     workingDir 'incubator-phoenix'
     commandLine 'mvn',"-T","2C", "clean", 'package',"-Psecurity",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
 }
 
-task incubator-phoenix(dependsOn: [incubator-phoenix-tar]) {
+task incubator_phoenix(dependsOn: [incubator_phoenix_tar]) {
     doLast {
         ant.delete(dir: "incubator-phoenix/target/tar")
         ant.mkdir(dir: "incubator-phoenix/target/tar")
@@ -128,15 +128,15 @@ task apache_hbase(dependsOn: [auditor, apache_hbase_tar]) {
     }
 }
 
-task squirrel-sql_clean(type: Exec) {
+task squirrel_sql_clean(type: Exec) {
     workingDir 'squirrel-sql/sql12'
     commandLine 'ant','clean'
 }
-task squirrel-sql-tar(type: Exec) {
+task squirrel_sql_tar(type: Exec) {
     workingDir 'squirrel-sql/sql12'
     commandLine 'ant'
 }
-task squirrel-sql(dependsOn: [squirrel-sql-tar]) {
+task squirrel_sql(dependsOn: [squirrel_sql_tar]) {
     doLast {
         ant.delete(dir: 'squirrel-sql/target/zip')
         ant.mkdir(dir: "squirrel-sql/target/zip")
@@ -162,12 +162,12 @@ task squirrel-sql(dependsOn: [squirrel-sql-tar]) {
 }
 
 
-task ocnosql-tar(type: Exec) {
+task ocnosql_tar(type: Exec) {
     workingDir 'ocnosql'
     commandLine 'mvn',"-T","2C", "clean", 'package',"-Psecurity",'-DskipTests', "-Dmaven.javadoc.skip=true"
 }
 
-task ocnosql(dependsOn: [auditor, ocnosql-tar]) {
+task ocnosql(dependsOn: [auditor, ocnosql_tar]) {
     doLast {
         ant.delete(dir: 'ocnosql/target/tar')
         ant.mkdir(dir: "ocnosql/target/tar")
@@ -198,7 +198,7 @@ task ocnosql(dependsOn: [auditor, ocnosql-tar]) {
         ant.move(file: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/ocnosql-${ocnosql_version}.tar.gz")
     }
 } 
-task all(dependsOn: [auditor, apache_hbase , incubator-phoenix , squirrel-sql, ocnosql]) {
+task all(dependsOn: [auditor, apache_hbase , incubator_phoenix , squirrel_sql, ocnosql]) {
     doLast {
         ant.mkdir(dir: "build/tar/ocnosql-${ocnosql_version}")
         ant.move(file: "build/ocnosql", tofile: "build/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
