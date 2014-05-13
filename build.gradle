@@ -48,7 +48,7 @@ task auditor() {
 
 task incubator_phoenix_tar(type: Exec) {
     workingDir 'incubator-phoenix'
-    commandLine 'mvn',"-T","2C", "clean", 'package',"-Psecurity",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
+    commandLine 'mvn',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
 }
 
 task incubator_phoenix(dependsOn: [incubator_phoenix_tar]) {
@@ -88,7 +88,7 @@ task incubator_phoenix(dependsOn: [incubator_phoenix_tar]) {
 
 task apache_hbase_tar(type: Exec) {
     workingDir 'ochadoop/apache-hbase'
-    commandLine 'mvn',"-T","2C", "clean", 'package',"-Psecurity",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
+    commandLine 'mvn',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
 }
 task apache_hbase(dependsOn: [auditor, apache_hbase_tar]) {
     doLast {
@@ -164,7 +164,7 @@ task squirrel_sql(dependsOn: [squirrel_sql_tar]) {
 
 task ocnosql_tar(type: Exec) {
     workingDir 'ocnosql'
-    commandLine 'mvn',"-T","2C", "clean", 'package',"-Psecurity",'-DskipTests', "-Dmaven.javadoc.skip=true"
+    commandLine 'mvn',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true"
 }
 
 task ocnosql(dependsOn: [auditor, ocnosql_tar]) {
