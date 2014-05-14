@@ -88,7 +88,7 @@ task incubator_phoenix(dependsOn: [incubator_phoenix_tar]) {
 
 task apache_hbase_tar(type: Exec) {
     workingDir 'ochadoop/apache-hbase'
-    commandLine 'mvn',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
+    commandLine 'mvn --info',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0'
 }
 task apache_hbase(dependsOn: [auditor, apache_hbase_tar]) {
     doLast {
