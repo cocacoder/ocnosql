@@ -14,7 +14,6 @@ ext {
     apache_hive_legacy_version = '0.11.0'
     amplab_hive_version = '0.11.0-shark-0.9.1'
     hadoop_lzo_version = '0.4.19'
-    auditor_version = 'och2.0.0-beta'
     apache_hive_extension_version = '0.12.0-och2.0.0-beta'
     apache_hive_extension_legacy_version = '0.11.0-och2.0.0-beta'
 }
@@ -23,12 +22,6 @@ repositories {
     maven {
         url privateRepo
     }
-}
-configurations {
-    auditor_plugin
-}
-dependencies {
-    auditor_plugin "com.ailk.oci.auditor:auditor-plugin:$auditor_version"
 }
 
 def getFromMaven(src, destDir) {
@@ -117,7 +110,7 @@ task ocnosql(dependsOn: [ocnosql_tar]) {
         ant.move(file: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/ocnosql-${ocnosql_version}.tar.gz")
     }
 } 
-task all(dependsOn: [auditor, incubator_phoenix , squirrel_sql, ocnosql]) {
+task all(dependsOn: [incubator_phoenix , squirrel_sql, ocnosql]) {
     doLast {
         ant.mkdir(dir: "build/tar/ocnosql-${ocnosql_version}")
         ant.move(file: "build/ocnosql", tofile: "build/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
