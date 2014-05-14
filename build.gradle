@@ -34,7 +34,7 @@ def getFromMaven(src, destDir) {
 
 task incubator_phoenix_tar(type: Exec) {
     workingDir 'incubator-phoenix'
-    commandLine 'mvn',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0','-Dcompat.module=phoenix-hadoop2-compat'
+    commandLine 'mvn',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2.0','-Dcompat.module=2.0'
 }
 
 task incubator_phoenix(dependsOn: [incubator_phoenix_tar]) {
