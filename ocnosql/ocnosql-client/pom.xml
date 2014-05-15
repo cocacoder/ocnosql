@@ -60,7 +60,7 @@
         </dependency>
         <dependency>
 			<groupId>org.apache.hbase</groupId>
-			<artifactId>hbase-security</artifactId>
+			<artifactId>hbase</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>org.mortbay.jetty</groupId>

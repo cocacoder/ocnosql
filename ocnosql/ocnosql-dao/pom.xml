@@ -72,7 +72,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.hbase</groupId>
-            <artifactId>hbase-security</artifactId>
+            <artifactId>hbase</artifactId>
 
         </dependency>
         <dependency>
