@@ -52,8 +52,7 @@ task incubator_phoenix(dependsOn: [incubator_phoenix_tar,package_incubator_phoen
         rootdir = "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}"
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/bin", tofile: rootdir)
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/lib", tofile: rootdir)
-        ant.tar(basedir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}", destfile: "incubator-phoenix/targe
-        t/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar")
+        ant.tar(basedir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar")
         ant.gzip(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz")
         ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}")
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz")
