@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.ailk.oci</groupId>
 		<artifactId>ocnosql</artifactId>
-		<version>V01B06C01</version>
+		<version>V01B07C02</version>
 	</parent>
 	<artifactId>ocnosql-common</artifactId>
 	<name>ocnosql-common</name>

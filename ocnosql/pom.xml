@@ -16,13 +16,8 @@
         <log4j.version>1.2.14</log4j.version>
         <spring.version>3.2.1.RELEASE</spring.version>
         <hibernate.version>4.1.9.Final</hibernate.version>
-        <project.version>V01B06C01</project.version>
+        <project.version>V01B07C02</project.version>
     </properties>
-    <scm>
-        <connection>scm:svn:http://10.1.252.188/svn/ocnosql/trunk</connection>
-        <developerConnection>scm:svn:http://10.1.252.188/svn/ocnosql/trunk</developerConnection>
-        <url>http://10.1.252.188/svn/ocnosql/trunk</url>
-    </scm>
     <dependencyManagement>
         <dependencies>
             <dependency>
