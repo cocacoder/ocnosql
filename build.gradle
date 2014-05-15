@@ -8,7 +8,7 @@ ext {
     zookeeper_version = '3.4.5-cdh4.2.1'
     hadoop_common_version = '2.0.0-cdh4.2.1'
     hadoop_common_mr1_version = '2.0.0-mr1-cdh4.2.1'
-    apache_hbase_version = '0.94.12-security'
+    apache_hbase_version = '0.94.12'
     apache_phoenix_version='3.0.0'
     apache_hive_version = '0.12.0'
     apache_hive_legacy_version = '0.11.0'

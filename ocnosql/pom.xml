@@ -42,7 +42,7 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.hbase</groupId>
-                <artifactId>hbase-security</artifactId>
+                <artifactId>hbase</artifactId>
                 <version>0.94.12</version>
             </dependency>
             <dependency>
