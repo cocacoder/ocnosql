@@ -26,7 +26,7 @@ repositories {
 
 def getFromMaven(src, destDir) {
     s = src.split("[:@]")
-    srcUrl = "http://115.29.40.120:8181/nexus/service/local/artifact/maven/redirect?r=ailk&g=${s[0]}&a=${s[1]}&v=${s[2]}&e=${s[3]}"
+    srcUrl = "http://10.1.253.223:8081/nexus/service/local/artifact/maven/redirect?r=ailk&g=${s[0]}&a=${s[1]}&v=${s[2]}&e=${s[3]}"
     ant.echo("downloading:$srcUrl to:$destDir/${s[1]}-${s[2]}.${s[3]}")
     ant.mkdir(dir: destDir)
     ant.get(src: srcUrl, dest: "$destDir/${s[1]}-${s[2]}.${s[3]}", verbose: true)
@@ -49,10 +49,12 @@ task incubator_phoenix(dependsOn: [incubator_phoenix_tar,package_incubator_phoen
         ant.untar(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating.tar",dest: 'incubator-phoenix/target/tar')
         ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}")
         ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}")
+        ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}/lib")
+        ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}/bin")
         rootdir = "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}"
-        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/bin", tofile: rootdir)
-        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/lib", tofile: rootdir)
-        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/phoenix-${apache_phoenix_version}-incubating-client.jar", tofile: rootdir)
+        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/bin", tofile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}/bin")
+        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/lib", tofile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}/lib")
+        ant.move(file: "incubator-phoenix/phoenix-assembly/target/phoenix-3.0.0-incubating-client.jar", tofile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}")
         ant.tar(basedir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar")
         ant.gzip(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz")
         ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}")
@@ -107,7 +109,6 @@ task ocnosql(dependsOn: [ocnosql_tar,package_ocnosql_tar]) {
         ant.copy(file: "ocnosql-tools/target/ocnosql-tools-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
         ant.mkdir(dir: "ocnosql/target/tar/ocnosql-${ocnosql_version}")
         ant.mkdir(dir: "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
-        ant.mkdir(dir: "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
         rootdir = "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}"
         ant.move(file: "ocnosql/src/main/bin/", tofile: "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
         ant.tar(basedir: "ocnosql/target/tar/ocnosql-${ocnosql_version}", destfile: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar")
