@@ -222,7 +222,7 @@
     <modules>
         <module>ocnosql-client</module>
         <module>ocnosql-dao</module>
-        <!--<module>ocnosql-model</module>-->
+        <module>ocnosql-model</module>
         <!--<module>ocnosql-rest</module>-->
         <!--<module>ocnosql-schedule</module>-->
         <!--<module>ocnosql-service</module>-->
