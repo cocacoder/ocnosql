@@ -26,7 +26,7 @@ repositories {
 
 def getFromMaven(src, destDir) {
     s = src.split("[:@]")
-    srcUrl = "http://10.1.253.223:8081/nexus/service/local/artifact/maven/redirect?r=ailk&g=${s[0]}&a=${s[1]}&v=${s[2]}&e=${s[3]}"
+    srcUrl = "http://115.29.40.120:8181/nexus/service/local/artifact/maven/redirect?r=ailk&g=${s[0]}&a=${s[1]}&v=${s[2]}&e=${s[3]}"
     ant.echo("downloading:$srcUrl to:$destDir/${s[1]}-${s[2]}.${s[3]}")
     ant.mkdir(dir: destDir)
     ant.get(src: srcUrl, dest: "$destDir/${s[1]}-${s[2]}.${s[3]}", verbose: true)
@@ -52,6 +52,7 @@ task incubator_phoenix(dependsOn: [incubator_phoenix_tar,package_incubator_phoen
         rootdir = "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}"
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/bin", tofile: rootdir)
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/lib", tofile: rootdir)
+        ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/phoenix-${apache_phoenix_version}-incubating-client.jar", tofile: rootdir)
         ant.tar(basedir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar")
         ant.gzip(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz")
         ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}")
