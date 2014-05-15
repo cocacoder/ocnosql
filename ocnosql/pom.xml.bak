@@ -36,11 +36,6 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.ailk.oci</groupId>
-                <artifactId>ocnosql-model</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.apache.hbase</groupId>
                 <artifactId>hbase-security</artifactId>
                 <version>0.94.12</version>
