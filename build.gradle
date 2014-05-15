@@ -44,6 +44,7 @@ task incubator_phoenix(dependsOn: [incubator_phoenix_tar,package_incubator_phoen
     doLast {
         ant.delete(dir: "incubator-phoenix/target/tar")
         ant.mkdir(dir: "incubator-phoenix/target/tar")
+        ant.ungzip(src: "incubator-phoenix/phoenix-assembly/target/phoenix-${apache_phoenix_version}-incubating.tar.gz",dest: 'incubator-phoenix/phoenix-assembly/target')
         ant.copy(file: "incubator-phoenix/phoenix-assembly/target/phoenix-${apache_phoenix_version}-incubating.tar", todir: "incubator-phoenix/target/tar")
         ant.untar(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating.tar",dest: 'incubator-phoenix/target/tar')
         ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}")
