@@ -47,15 +47,15 @@ task incubator_phoenix(dependsOn: [incubator_phoenix_tar,package_incubator_phoen
         ant.gunzip(src: "incubator-phoenix/phoenix-assembly/target/phoenix-${apache_phoenix_version}-incubating.tar.gz",dest: 'incubator-phoenix/phoenix-assembly/target')
         ant.copy(file: "incubator-phoenix/phoenix-assembly/target/phoenix-${apache_phoenix_version}-incubating.tar", todir: "incubator-phoenix/target/tar")
         ant.untar(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating.tar",dest: 'incubator-phoenix/target/tar')
+        ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}")
         ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}")
         rootdir = "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}"
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/bin", tofile: rootdir)
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/lib", tofile: rootdir)
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/phoenix-3.0.0-incubating-client.jar", tofile: rootdir)
-        //replace with custom changes
-        //end replace
         ant.tar(basedir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar")
         ant.gzip(src: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar", destfile: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz")
+        ant.mkdir(dir: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}/phoenix-${apache_phoenix_version}-${ocnosql_version}")
         ant.move(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/phoenix-${apache_phoenix_version}-${ocnosql_version}.tar.gz")
     }
 }
@@ -72,6 +72,7 @@ task squirrel_sql(dependsOn: [squirrel_sql_clean,squirrel_sql_tar]) {
     doLast {
         ant.delete(dir: 'squirrel-sql/target/zip')
         ant.mkdir(dir: "squirrel-sql/target/zip")
+        ant.mkdir(dir: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}")
         ant.mkdir(dir: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}/squirrel-sql-${squirrel_version}-${ocnosql_version}")
         rootdir = "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}/squirrel-sql-${squirrel_version}-${ocnosql_version}"
         ant.move(file: "squirrel-sql/sql12/output/dist/", tofile: rootdir)
@@ -104,9 +105,10 @@ task ocnosql(dependsOn: [ocnosql_tar,package_ocnosql_tar]) {
         ant.copy(file: "ocnosql-example/target/ocnosql-example-${ocnosql_version}.war", todir: "ocnosql/target/tar")
         ant.copy(file: "ocnosql-model/target/ocnosql-model-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
         ant.copy(file: "ocnosql-tools/target/ocnosql-tools-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
+        ant.mkdir(dir: "ocnosql/target/tar/ocnosql-${ocnosql_version}")
         ant.mkdir(dir: "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
-        rootdir = "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}"
         ant.mkdir(dir: "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
+        rootdir = "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}"
         ant.move(file: "ocnosql/src/main/bin/", tofile: "ocnosql/target/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
         ant.tar(basedir: "ocnosql/target/tar/ocnosql-${ocnosql_version}", destfile: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar")
         ant.gzip(src: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar", destfile: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar.gz")
