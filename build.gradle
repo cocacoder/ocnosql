@@ -36,8 +36,11 @@ task incubator_phoenix_tar(type: Exec) {
     workingDir 'incubator-phoenix'
     commandLine 'mvn',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2'
 }
-
-task incubator_phoenix(dependsOn: [incubator_phoenix_tar]) {
+task package_incubator_phoenix_tar(type: Exec) {
+    workingDir 'incubator-phoenix'
+    commandLine 'mvn',"package",'-DskipTests', "-Dmaven.javadoc.skip=true",'-Dhadoop.profile=2'
+}
+task incubator_phoenix(dependsOn: [incubator_phoenix_tar,package_incubator_phoenix_tar]) {
     doLast {
         ant.delete(dir: "incubator-phoenix/target/tar")
         ant.mkdir(dir: "incubator-phoenix/target/tar")
@@ -64,7 +67,7 @@ task squirrel_sql_tar(type: Exec) {
     workingDir 'squirrel-sql/sql12'
     commandLine 'ant'
 }
-task squirrel_sql(dependsOn: [squirrel_sql_tar]) {
+task squirrel_sql(dependsOn: [squirrel_sql_clean,squirrel_sql_tar]) {
     doLast {
         ant.delete(dir: 'squirrel-sql/target/zip')
         ant.mkdir(dir: "squirrel-sql/target/zip")
@@ -86,8 +89,11 @@ task ocnosql_tar(type: Exec) {
     workingDir 'ocnosql'
     commandLine 'mvn',"clean",'-DskipTests', "-Dmaven.javadoc.skip=true"
 }
-
-task ocnosql(dependsOn: [ocnosql_tar]) {
+task package_ocnosql_tar(type: Exec) {
+    workingDir 'ocnosql'
+    commandLine 'mvn',"package",'-DskipTests', "-Dmaven.javadoc.skip=true"
+}
+task ocnosql(dependsOn: [ocnosql_tar,package_ocnosql_tar]) {
     doLast {
         ant.delete(dir: 'ocnosql/target/tar')
         ant.mkdir(dir: "ocnosql/target/tar")
@@ -110,7 +116,7 @@ task ocnosql(dependsOn: [ocnosql_tar]) {
         ant.move(file: "ocnosql/target/tar/ocnosql-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/ocnosql-${ocnosql_version}.tar.gz")
     }
 } 
-task all(dependsOn: [incubator_phoenix , squirrel_sql, ocnosql]) {
+task all(dependsOn: [incubator_phoenix ,squirrel_sql, ocnosql]) {
     doLast {
         ant.mkdir(dir: "build/tar/ocnosql-${ocnosql_version}")
         ant.move(file: "build/ocnosql", tofile: "build/tar/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
