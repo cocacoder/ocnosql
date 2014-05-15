@@ -1,7 +1,7 @@
 apply plugin: 'java'
 ext {
-    privateRepo = 'http://10.1.253.223:8081/nexus/content/groups/ailk'
-    privateDeployRepo = 'http://10.1.253.223:8081/nexus/content/repositories/ailk-snapshots'
+    privateRepo = 'http://115.29.40.120:8181/nexus/content/groups/ailk'
+    privateDeployRepo = 'http://115.29.40.120:8181/nexus/content/repositories/ailk-snapshots'
     forrest_home = System.getProperty('FORREST_HOME', "/home/cloudetl/apache-forrest-0.9")
     oc_version = 'och2.0.0-SNAPSHOT'
     ocnosql_version='V01B07C02'
