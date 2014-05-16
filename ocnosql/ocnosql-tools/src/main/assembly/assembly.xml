@@ -10,19 +10,8 @@
             <directory>src/main/bin/maintain</directory>
             <outputDirectory>maintain</outputDirectory>
         </fileSet>
-        <fileSet>
-            <directory>src/main/phoenix</directory>
-            <outputDirectory>phoenix-2.1.0</outputDirectory>
-        </fileSet>
-        <fileSet>
-            <directory>src/main/squirrel</directory>
-            <outputDirectory>squirrel-sql-3.5.0-standard</outputDirectory>
-        </fileSet>
+        
     </fileSets>
     <dependencySets>
-        <dependencySet>
-            <outputDirectory>lib</outputDirectory>
-            <scope>runtime</scope>
-        </dependencySet>
     </dependencySets>
 </assembly>
