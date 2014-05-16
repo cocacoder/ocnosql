@@ -16,6 +16,7 @@ ext {
     hadoop_lzo_version = '0.4.19'
     apache_hive_extension_version = '0.12.0-och2.0.0-beta'
     apache_hive_extension_legacy_version = '0.11.0-och2.0.0-beta'
+    squirrel_version='1.0'
 }
 
 repositories {
