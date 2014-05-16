@@ -73,9 +73,7 @@ task squirrel_sql(dependsOn: [squirrel_sql_tar]) {
         ant.mkdir(dir: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}/squirrel-sql-${squirrel_version}-${ocnosql_version}")
         rootdir = "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}/squirrel-sql-${squirrel_version}-${ocnosql_version}"
         ant.move(file: "squirrel-sql/sql12/output/dist/", tofile: rootdir)
-        //replace with custom changes
-        
-        ant.copy(file: "incubator-phoenix/target/tar/phoenix-${apache_phoenix_version}-incubating/lib/phoenix-core-${apache_phoenix_version}-incubating.jar", todir: "$rootdir/lib/")
+        ant.copy(file: "incubator-phoenix/phoenix-core/target/phoenix-core-${apache_phoenix_version}-incubating.jar", todir: "$rootdir/lib/")
        
         //end replace
         ant.zip(basedir: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}", destfile: "squirrel-sql/target/zip/squirrel-sql-${squirrel_version}-${ocnosql_version}.zip")
