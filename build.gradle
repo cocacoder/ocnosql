@@ -105,7 +105,7 @@ task ocnosql(dependsOn: [ocnosql_tar,package_ocnosql_tar]) {
         ant.mkdir(dir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
         ant.mkdir(dir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/lib")
         ant.mkdir(dir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
-        ant.copy(file: "ocnosql/ocnosql-tools/src/main/bin", todir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
+        ant.copy(file: "ocnosql/ocnosql-tools/target/ocnosql-tools-${ocnosql_version}-package.tar", todir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
         ant.move(file: "ocnosql/target/tar/", tofile: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/lib")
         ant.tar(basedir: "ocnosql/target/ocnosql-${ocnosql_version}", destfile: "ocnosql/target/ocnosql-${ocnosql_version}.tar")
         ant.gzip(src: "ocnosql/target/ocnosql-${ocnosql_version}.tar", destfile: "ocnosql/target/ocnosql-${ocnosql_version}.tar.gz")
