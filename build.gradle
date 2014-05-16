@@ -60,15 +60,11 @@ task incubator_phoenix(dependsOn: [incubator_phoenix_tar,package_incubator_phoen
     }
 }
 
-task squirrel_sql_clean(type: Exec) {
-    workingDir 'squirrel-sql/sql12'
-    commandLine 'ant','clean'
-}
 task squirrel_sql_tar(type: Exec) {
     workingDir 'squirrel-sql/sql12'
     commandLine 'ant'
 }
-task squirrel_sql(dependsOn: [squirrel_sql_clean,squirrel_sql_tar]) {
+task squirrel_sql(dependsOn: [squirrel_sql_tar]) {
     doLast {
         ant.delete(dir: 'squirrel-sql/target/zip')
         ant.mkdir(dir: "squirrel-sql/target/zip")
