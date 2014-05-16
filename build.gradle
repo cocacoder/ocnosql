@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'maven'
 ext {
     privateRepo = 'http://115.29.40.120:8181/nexus/content/groups/ailk'
     privateDeployRepo = 'http://115.29.40.120:8181/nexus/content/repositories/ailk-snapshots'
@@ -100,10 +101,12 @@ task ocnosql(dependsOn: [ocnosql_tar,package_ocnosql_tar]) {
         ant.copy(file: "ocnosql/ocnosql-example/target/ocnosql-example-${ocnosql_version}.war", todir: "ocnosql/target/tar")
         ant.copy(file: "ocnosql/ocnosql-model/target/ocnosql-model-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
         ant.copy(file: "ocnosql/ocnosql-tools/target/ocnosql-tools-${ocnosql_version}.jar", todir: "ocnosql/target/tar")
-        ant.copy(file: "ocnosql/ocnosql-tools/target/ocnosql-tools-${ocnosql_version}-package.tar", todir: "ocnosql/target/tar")
         ant.mkdir(dir: "ocnosql/ocnosql/target/ocnosql-${ocnosql_version}")
         ant.mkdir(dir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
-        ant.move(file: "ocnosql/target/tar/", tofile: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}")
+        ant.mkdir(dir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/lib")
+        ant.mkdir(dir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
+        ant.copy(file: "ocnosql/ocnosql-tools/src/main/bin", todir: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/bin")
+        ant.move(file: "ocnosql/target/tar/", tofile: "ocnosql/target/ocnosql-${ocnosql_version}/ocnosql-${ocnosql_version}/lib")
         ant.tar(basedir: "ocnosql/target/ocnosql-${ocnosql_version}", destfile: "ocnosql/target/ocnosql-${ocnosql_version}.tar")
         ant.gzip(src: "ocnosql/target/ocnosql-${ocnosql_version}.tar", destfile: "ocnosql/target/ocnosql-${ocnosql_version}.tar.gz")
         ant.move(file: "ocnosql/target/ocnosql-${ocnosql_version}.tar.gz", tofile: "$buildDir/ocnosql/ocnosql-${ocnosql_version}.tar.gz")
