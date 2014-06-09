@@ -5,8 +5,6 @@ import java.security.NoSuchAlgorithmException;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.ailk.oci.ocnosql.common.OCNosqlNestedRuntimeException;
-
 public class MD5Util {
 	//public String str;
 
@@ -31,10 +29,8 @@ public class MD5Util {
 				buf.append(Integer.toHexString(i));
 			}
 			str = buf.toString();
-			//System.out.println("result: " + buf.toString());// 32位的加密
-			//System.out.println("result: " + buf.toString().substring(8, 24));// 16位的加密
 		} catch (NoSuchAlgorithmException e) {
-			throw new OCNosqlNestedRuntimeException("MD5 '" + text + "' exception.", e);
+			throw new RuntimeException("MD5 '" + text + "' exception.", e);
 
 		}
 		return str;

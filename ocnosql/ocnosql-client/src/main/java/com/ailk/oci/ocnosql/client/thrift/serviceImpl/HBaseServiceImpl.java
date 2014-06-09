@@ -1,15 +1,24 @@
 package com.ailk.oci.ocnosql.client.thrift.serviceImpl;
 
-import com.ailk.oci.ocnosql.client.config.spi.*;
-import com.ailk.oci.ocnosql.client.query.*;
-import com.ailk.oci.ocnosql.client.query.criterion.*;
-import com.ailk.oci.ocnosql.client.spi.*;
-import com.ailk.oci.ocnosql.client.thrift.exception.*;
-import com.ailk.oci.ocnosql.client.thrift.service.*;
-import com.google.common.collect.*;
-import org.apache.thrift.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import java.util.*;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.thrift.TException;
+
+import com.ailk.oci.ocnosql.client.query.criterion.Criterion;
+import com.ailk.oci.ocnosql.client.query.criterion.Expression;
+import com.ailk.oci.ocnosql.client.spi.ClientAdaptor;
+import com.ailk.oci.ocnosql.client.thrift.exception.ClientRuntimeException;
+import com.ailk.oci.ocnosql.client.thrift.service.HBaseService;
+import com.ailk.oci.ocnosql.common.config.ColumnFamily;
+import com.ailk.oci.ocnosql.common.config.Connection;
 
 /**
  * Created by IntelliJ IDEA.
@@ -19,6 +28,7 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class HBaseServiceImpl implements HBaseService.Iface{
+	static Log LOG = LogFactory.getLog(HBaseServiceImpl.class);
 
     ClientAdaptor adaptor;
 
@@ -35,12 +45,12 @@ public class HBaseServiceImpl implements HBaseService.Iface{
     @Override
     public List<List<String>> queryByRowkeyFir(String rowkey, List<String> tableNames, String columnValueFilter, Map<String, String> param) throws ClientRuntimeException, TException {
         try{
-            System.out.println("tableName = "+tableNames.get(0) + " rowkey = " + rowkey);
+        	LOG.info("tableName = "+tableNames.get(0) + " rowkey = " + rowkey);
             Criterion criterion = getCriterionByColumnFilter(columnValueFilter);
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,rowkey,tableNames,criterion,param);
-            System.out.println("stringArrResult.size="+stringArrResult.size());
+            LOG.info("stringArrResult.size="+stringArrResult.size());
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -51,7 +61,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             Criterion criterion = getCriterionByColumnFilterList(columnValueFilterList,logicalOpt);
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,rowkey,tableNames,criterion,param);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -59,11 +69,11 @@ public class HBaseServiceImpl implements HBaseService.Iface{
     @Override
     public List<List<String>> queryByRowkeySec(String rowkey, List<String> tableNames, String columnValueFilter, Map<String, String> param, Map<String,List<String>> columnFilter) throws ClientRuntimeException, TException {
        try{
-            List<com.ailk.oci.ocnosql.client.query.ColumnFamily> cfs = transferThriftCF(columnFilter);
+            List<com.ailk.oci.ocnosql.common.config.ColumnFamily> cfs = transferThriftCF(columnFilter);
             Criterion criterion = getCriterionByColumnFilter(columnValueFilter);
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,rowkey,tableNames,criterion,param,cfs);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -71,11 +81,11 @@ public class HBaseServiceImpl implements HBaseService.Iface{
     @Override
     public List<List<String>> queryByRowkeySecCrList(String rowkey, List<String> tableNames, List<String> columnValueFilterList, String logicalOpt, Map<String, String> param, Map<String,List<String>> columnFilter) throws ClientRuntimeException, TException {
        try{
-            List<com.ailk.oci.ocnosql.client.query.ColumnFamily> cfs = transferThriftCF(columnFilter);
+            List<com.ailk.oci.ocnosql.common.config.ColumnFamily> cfs = transferThriftCF(columnFilter);
             Criterion criterion = getCriterionByColumnFilterList(columnValueFilterList,logicalOpt);
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,rowkey,tableNames,criterion,param,cfs);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -88,7 +98,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,transferObjectArrToStringArr(rowkey.toArray()),
                     tableNames,criterion,param);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -102,7 +112,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,transferObjectArrToStringArr(rowkey.toArray())
                     ,tableNames,criterion,param);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -115,7 +125,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             Criterion criterion = getCriterionByColumnFilter(columnValueFilter);
             List<String[]> stringArrResult = adaptor.queryByRowkeyPrefix(conn,rowkeyPrefix,tableNames,criterion,param);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -128,7 +138,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             Criterion criterion = getCriterionByColumnFilterList(columnValueFilterList,logicalOpt);
             List<String[]> stringArrResult = adaptor.queryByRowkeyPrefix(conn,rowkeyPrefix,tableNames,criterion,param);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -138,11 +148,11 @@ public class HBaseServiceImpl implements HBaseService.Iface{
                                            String columnValueFilter, Map<String, String> param, Map<String,List<String>> columnFilter)
             throws ClientRuntimeException, TException {
        try{
-            List<com.ailk.oci.ocnosql.client.query.ColumnFamily> cfs = transferThriftCF(columnFilter);
+            List<com.ailk.oci.ocnosql.common.config.ColumnFamily> cfs = transferThriftCF(columnFilter);
             Criterion criterion = getCriterionByColumnFilter(columnValueFilter);
             List<String[]> stringArrResult = adaptor.queryByRowkeyPrefix(conn,rowkeyPrefix,tableNames,criterion,param,cfs);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -152,11 +162,11 @@ public class HBaseServiceImpl implements HBaseService.Iface{
                                   List<String> columnValueFilterList, String logicalOpt, Map<String, String> param, Map<String,List<String>> columnFilter)
             throws ClientRuntimeException, TException {
         try{
-            List<com.ailk.oci.ocnosql.client.query.ColumnFamily> cfs = transferThriftCF(columnFilter);
+            List<com.ailk.oci.ocnosql.common.config.ColumnFamily> cfs = transferThriftCF(columnFilter);
             Criterion criterion = getCriterionByColumnFilterList(columnValueFilterList,logicalOpt);
             List<String[]> stringArrResult = adaptor.queryByRowkeyPrefix(conn,rowkeyPrefix,tableNames,criterion,param,cfs);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -170,7 +180,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
         List<String[]> stringArrResult = adaptor.queryByRowkey(conn,(String[])rowkey.toArray(),tableNames,criterion,
                                                             param,transferThriftCF(columnFilter));
         return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -185,7 +195,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
         List<String[]> stringArrResult = adaptor.queryByRowkey(conn,(String[])rowkey.toArray(),tableNames,criterion,
                                                             param,transferThriftCF(columnFilter));
         return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -198,7 +208,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             Criterion criterion = getCriterionByColumnFilter(columnValueFilter);
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,startKey,stopKey,tableNames,criterion,param);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -212,7 +222,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             Criterion criterion = getCriterionByColumnFilterList(columnValueFilterList,logicalOpt);
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,startKey,stopKey,tableNames,criterion,param);
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -227,7 +237,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,startKey,stopKey,tableNames,criterion,param,
                     transferThriftCF(columnFilter));
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }
@@ -242,7 +252,7 @@ public class HBaseServiceImpl implements HBaseService.Iface{
             List<String[]> stringArrResult = adaptor.queryByRowkey(conn,startKey,stopKey,tableNames,criterion,param,
                     transferThriftCF(columnFilter));
             return stringArrToList(stringArrResult);
-        }catch(com.ailk.oci.ocnosql.client.ClientRuntimeException e){
+        }catch(ClientRuntimeException e){
             throw new ClientRuntimeException().setErrormessage(e.getMessage());
         }
     }

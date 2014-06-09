@@ -11,25 +11,32 @@ import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import com.ailk.oci.ocnosql.client.ClientRuntimeException;
-import com.ailk.oci.ocnosql.client.cache.OciTableRef;
-import com.ailk.oci.ocnosql.client.cache.TableMetaCache;
-import com.ailk.oci.ocnosql.client.query.schema.OCTable;
-import com.ailk.oci.ocnosql.client.util.HTableUtils;
-import com.ailk.oci.ocnosql.common.util.PropertiesUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.ZooKeeperConnectionException;
-import org.apache.hadoop.hbase.client.*;
+import org.apache.hadoop.hbase.client.Get;
+import org.apache.hadoop.hbase.client.HTableInterface;
+import org.apache.hadoop.hbase.client.NoServerForRegionException;
+import org.apache.hadoop.hbase.client.Result;
+import org.apache.hadoop.hbase.client.ResultScanner;
+import org.apache.hadoop.hbase.client.RetriesExhaustedException;
+import org.apache.hadoop.hbase.client.Scan;
 
-import com.ailk.oci.ocnosql.client.compress.Compress;
-import com.ailk.oci.ocnosql.client.config.spi.CommonConstants;
 import com.ailk.oci.ocnosql.client.query.criterion.Criterion;
 import com.ailk.oci.ocnosql.client.query.criterion.Expression;
-import com.ailk.oci.ocnosql.client.rowkeygenerator.RowKeyGenerator;
-import com.ailk.oci.ocnosql.client.spi.ClientConnectionException;
+import com.ailk.oci.ocnosql.client.util.HTableUtils;
+import com.ailk.oci.ocnosql.common.compress.Compress;
+import com.ailk.oci.ocnosql.common.config.OciTableRef;
+import com.ailk.oci.ocnosql.common.config.cache.TableMetaCache;
+import com.ailk.oci.ocnosql.common.config.query.schema.OCTable;
+import com.ailk.oci.ocnosql.common.exception.ClientConnectionException;
+import com.ailk.oci.ocnosql.common.exception.ClientRuntimeException;
+import com.ailk.oci.ocnosql.common.exception.TableNotFoundException;
+import com.ailk.oci.ocnosql.common.rowkeygenerator.RowKeyGenerator;
+import com.ailk.oci.ocnosql.common.util.CommonConstants;
+import com.ailk.oci.ocnosql.common.util.PropertiesUtil;
 
 /**
  * 功能：多线程查询
@@ -139,7 +146,7 @@ public class QueryActor implements Runnable {
 			return null;
 		}
 		
-		RowKeyGenerator generator = com.ailk.oci.ocnosql.client.rowkeygenerator.RowKeyGeneratorHolder.resolveGenerator(tableInternal.getRowkeyGenerator());
+		RowKeyGenerator generator = com.ailk.oci.ocnosql.common.rowkeygenerator.RowKeyGeneratorHolder.resolveGenerator(tableInternal.getRowkeyGenerator());
 		if(generator != null){
 			for(int i = 0; i < rowkey.length; i++){
                 rowkey[i] = (String) generator.generate(rowkey[i]);
@@ -365,7 +372,6 @@ public class QueryActor implements Runnable {
 			List opr = query.getOpr().get(s);
 			for (Object o : opr) {//2：遍历涉及到的该字段的所有比对，比如a=1 or a=2
 				Expression ep = (Expression) o;
-				//System.out.println(s + " = " + OCTable.getColumnByIndex(Integer.parseInt(s)).getPosition());
 				//matchSimple = ep.accept((detail[OCTable.getColumnByIndex(Integer.parseInt(s)).getPosition()]));
 				//matchSimple = ep.accept((detail[Integer.parseInt(s)]));
 				if (octable != null) {

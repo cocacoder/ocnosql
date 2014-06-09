@@ -2,20 +2,16 @@ package com.ailk.oci.ocnosql.example.model;
 
 
 import com.ailk.oci.ocnosql.example.exception.*;
-import com.ailk.oci.ocnosql.example.util.*;
 import org.apache.commons.beanutils.*;
 import org.apache.commons.collections.*;
 import org.apache.commons.lang3.*;
 import org.apache.commons.logging.*;
 import org.dom4j.*;
 import org.dom4j.io.*;
-import org.springframework.beans.factory.*;
 import org.springframework.core.io.*;
 import org.springframework.core.io.support.*;
-
 import java.io.*;
 import java.util.*;
-import java.util.Map.*;
 
 public class BusiModelReader{
 

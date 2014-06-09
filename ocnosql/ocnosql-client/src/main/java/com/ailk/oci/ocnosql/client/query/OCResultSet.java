@@ -1,6 +1,6 @@
 package com.ailk.oci.ocnosql.client.query;
 
-import com.ailk.oci.ocnosql.client.query.schema.OCTable;
+import com.ailk.oci.ocnosql.common.config.query.schema.OCTable;
 
 import java.util.ArrayList;
 import java.util.List;

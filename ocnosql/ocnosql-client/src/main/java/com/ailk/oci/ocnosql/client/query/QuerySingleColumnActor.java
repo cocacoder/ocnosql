@@ -6,8 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
-import com.ailk.oci.ocnosql.client.cache.OciTableRef;
-import com.ailk.oci.ocnosql.client.config.spi.*;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,6 +15,9 @@ import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.util.Bytes;
 
 import com.ailk.oci.ocnosql.client.query.criterion.Criterion;
+import com.ailk.oci.ocnosql.common.config.OciTableRef;
+import com.ailk.oci.ocnosql.common.config.TableConfiguration;
+import com.ailk.oci.ocnosql.common.util.CommonConstants;
 
 /**
  * 功能：单列方式查询线程

@@ -1,11 +1,12 @@
 package com.ailk.oci.ocnosql.client.thrift.client.java;
 
 import com.ailk.oci.ocnosql.client.thrift.service.*;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.thrift.*;
 import org.apache.thrift.protocol.*;
 import org.apache.thrift.transport.*;
-
-import java.util.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,6 +16,7 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class OCNoSQLClient {
+	static Log LOG = LogFactory.getLog(OCNoSQLClient.class);
 
     public static void main(String[] args) {
          TTransport transport = null;
@@ -43,9 +45,8 @@ public class OCNoSQLClient {
             List<List<String>> result = null; //hbaseClient.queryByRowkeyFir(rowkey,tables,cf,null);
             for(List<String> a : result){
                 for(int i=0; i<a.size(); i++){
-                    System.out.print(a.get(i)+" ");
+                    LOG.info(a.get(i)+" ")
                 }
-                 System.out.println();
             }
 
             String sql = "select * from student";
@@ -54,7 +55,7 @@ public class OCNoSQLClient {
                 Set<Map.Entry<String,String>> set = aList.entrySet();
                 for(Iterator<Map.Entry<String,String>> it = set.iterator();it.hasNext();){
                     Map.Entry<String,String> entry = it.next();
-                    System.out.println("key =" +entry.getKey() + " value="+entry.getValue());
+                	LOG.info("key =" +entry.getKey() + " value="+entry.getValue());
                 }
             }
              */

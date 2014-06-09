@@ -12,20 +12,20 @@ import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.conf.*;
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
 
-import com.ailk.oci.ocnosql.client.ClientRuntimeException;
-import com.ailk.oci.ocnosql.client.config.spi.CommonConstants;
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
-import com.ailk.oci.ocnosql.client.importdata.PutLoad;
-import com.ailk.oci.ocnosql.client.rowkeygenerator.RowKeyGenerator;
 import com.ailk.oci.ocnosql.client.util.HTableUtilsV2;
+import com.ailk.oci.ocnosql.common.config.Connection;
+import com.ailk.oci.ocnosql.common.config.TableConfiguration;
+import com.ailk.oci.ocnosql.common.exception.ClientRuntimeException;
+import com.ailk.oci.ocnosql.common.rowkeygenerator.GenRKStep;
+import com.ailk.oci.ocnosql.common.rowkeygenerator.RowKeyGenerator;
+import com.ailk.oci.ocnosql.common.rowkeygenerator.TableRowKeyGenerator;
+import com.ailk.oci.ocnosql.common.util.CommonConstants;
 import com.ailk.oci.ocnosql.common.util.ParseUtil;
-import com.ailk.oci.ocnosql.client.rowkeygenerator.*;
-import com.ailk.oci.ocnosql.client.config.spi.*;
 
 public class HBasePut {
 
@@ -86,7 +86,7 @@ public static final Log log = LogFactory.getLog(HBasePut.class);
 
         conn = Connection.getInstance();
         Configuration conf = conn.getConf();
-        System.out.println("tableName=" + tableName);
+        log.info("tableName=" + tableName);
         table = HTableUtilsV2.getTable(conf, tableName);
 		table.setAutoFlush(false);
 

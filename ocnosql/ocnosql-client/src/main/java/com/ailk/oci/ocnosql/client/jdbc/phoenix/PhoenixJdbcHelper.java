@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import com.ailk.oci.ocnosql.client.jdbc.HbaseJdbcHelper;
 import com.ailk.oci.ocnosql.client.jdbc.pool.DbPool;
 
@@ -26,9 +30,7 @@ import com.ailk.oci.ocnosql.client.jdbc.pool.DbPool;
  * 
  */
 public class PhoenixJdbcHelper implements HbaseJdbcHelper {
-	// Connection connection = null;
-	// Statement statement = null;
-	// PreparedStatement preparedStatement = null;
+	static Log LOG = LogFactory.getLog(PhoenixJdbcHelper.class);
 
 	public PhoenixJdbcHelper() {
 		// 初始化的时候获取一个连接放在当前线程里
@@ -48,15 +50,6 @@ public class PhoenixJdbcHelper implements HbaseJdbcHelper {
 		/**
 		 * Phoenix的statement不支持addBatch
 		 */
-		/*
-		 * connection = DbPool.getConnection(); connection.setAutoCommit(false);
-		 * statement = connection.createStatement(); int rowCount = 0;
-		 * for(String sql:sqls){ statement.addBatch(sql); if (++rowCount %
-		 * batchSize == 0) { statement.executeBatch(); connection.commit();
-		 * System.out.println("Rows upserted: " + rowCount); } }
-		 * statement.executeBatch(); connection.commit();
-		 */
-
 		Connection connection = DbPool.getConnection();
 		connection.setAutoCommit(false);
 		int rowCount = 0;

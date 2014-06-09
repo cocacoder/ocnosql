@@ -2,14 +2,12 @@ package com.ailk.oci.ocnosql.client.spi;
 
 import java.util.List;
 import java.util.Map;
-
 import org.apache.hadoop.util.ReflectionUtils;
-
-import com.ailk.oci.ocnosql.client.ClientRuntimeException;
-import com.ailk.oci.ocnosql.client.config.spi.CommonConstants;
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
-import com.ailk.oci.ocnosql.client.query.ColumnFamily;
+import com.ailk.oci.ocnosql.common.exception.ClientRuntimeException;
 import com.ailk.oci.ocnosql.client.query.criterion.Criterion;
+import com.ailk.oci.ocnosql.common.util.CommonConstants;
+import com.ailk.oci.ocnosql.common.config.ColumnFamily;
+import com.ailk.oci.ocnosql.common.config.Connection;
 import com.ailk.oci.ocnosql.common.util.PropertiesUtil;
 
 /**
@@ -170,33 +168,5 @@ public class ClientAdaptor {
 		//直接调用Client接口
 		return client.queryBySql(sql, param);
 		
-	}
-	
-	/**
-	 * 数据导入
-	 * @param tableId 表ID
-	 * @param param 输入参数
-	 * @return
-	 * @throws ClientRuntimeException
-	 */
-	public boolean importData(String tableId, Map<String, String> param) throws ClientRuntimeException{
-		return client.importData(tableId, param);
-	}
-	
-	/**
-	 * 数据整表导出
-	 * @param tableId 表ID
-	 * @param param 输入参数
-	 * @return
-	 * @throws ClientRuntimeException
-	 */
-	public boolean exportData(String tableId, Map<String, String> param) throws ClientRuntimeException{
-		return client.exportData(tableId, param);
-		
-	}
-	
-	 
-	public boolean putData(String tableName, String[] record, Map<String, String> param) throws ClientRuntimeException{
-		return client.putData(tableName, record, param);
 	}
 }

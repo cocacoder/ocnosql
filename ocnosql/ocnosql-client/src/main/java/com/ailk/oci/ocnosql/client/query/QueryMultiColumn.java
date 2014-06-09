@@ -6,17 +6,18 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import com.ailk.oci.ocnosql.client.cache.OciTableRef;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.ailk.oci.ocnosql.client.ClientRuntimeException;
-import com.ailk.oci.ocnosql.client.config.spi.CommonConstants;
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
+import com.ailk.oci.ocnosql.common.exception.ClientRuntimeException;
 import com.ailk.oci.ocnosql.client.query.criterion.Criterion;
-import com.ailk.oci.ocnosql.client.spi.ClientConnectionException;
+import com.ailk.oci.ocnosql.common.exception.ClientConnectionException;
+import com.ailk.oci.ocnosql.common.util.CommonConstants;
+import com.ailk.oci.ocnosql.common.config.ColumnFamily;
+import com.ailk.oci.ocnosql.common.config.Connection;
+import com.ailk.oci.ocnosql.common.config.OciTableRef;
 
 public class QueryMultiColumn implements Query {
 	private final static Log log = LogFactory.getLog(QueryMultiColumn.class.getSimpleName());

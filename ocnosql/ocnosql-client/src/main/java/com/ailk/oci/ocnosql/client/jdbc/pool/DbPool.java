@@ -47,9 +47,9 @@ public final class DbPool {
 			synchronized (DbPool.class) {
 				if (null == dataSource) {
                     dataSource=new DruidDataSource();
-                    String jdbcUrl=com.ailk.oci.ocnosql.client.config.spi.Connection.get("jdbcUrl",null);
-                    String quorum=com.ailk.oci.ocnosql.client.config.spi.Connection.get("hbase.zookeeper.quorum",null);
-                    String clientPort=com.ailk.oci.ocnosql.client.config.spi.Connection.get("hbase.zookeeper.property.clientPort",null);
+                    String jdbcUrl=com.ailk.oci.ocnosql.common.config.Connection.get("jdbcUrl",null);
+                    String quorum=com.ailk.oci.ocnosql.common.config.Connection.get("hbase.zookeeper.quorum",null);
+                    String clientPort=com.ailk.oci.ocnosql.common.config.Connection.get("hbase.zookeeper.property.clientPort",null);
                     if(null==jdbcUrl){
                         throw new RuntimeException("[jdbcUrl] not config in client-runtime.properties");
                     }
@@ -78,7 +78,6 @@ public final class DbPool {
                             properties.load(new FileReader(new File(url.getPath())));
                         }
                         */
-                        //properties.list(System.out);
 
                         for(Map.Entry entry:properties.entrySet()){
                             BeanUtils.setProperty(dataSource, (String) entry.getKey(),entry.getValue());
@@ -96,7 +95,6 @@ public final class DbPool {
 			}
 		}
 
-		// System.out.println("----------------start getConnection");
 		// 从线程变量connectionHolder中获取连接
 		Connection conn = connectionHolder.get();
 		// 如果在当前线程中没有绑定相应的Connection
@@ -109,7 +107,6 @@ public final class DbPool {
 				e.printStackTrace();
 			}
 		}
-		//System.out.println(Thread.currentThread().getName()+"--------------------"+conn);
 		return conn;
 	}
 
@@ -120,9 +117,7 @@ public final class DbPool {
 		Connection conn = connectionHolder.get();
 		if (conn != null) {
 			try {
-				//System.out.println("------close:"+conn+"|"+conn.isClosed());
 				conn.close();
-				//System.out.println("------closeed:"+conn+"|"+conn.isClosed());
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}finally{

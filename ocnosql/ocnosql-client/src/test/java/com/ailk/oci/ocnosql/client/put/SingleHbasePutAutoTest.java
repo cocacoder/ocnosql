@@ -10,8 +10,8 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.ailk.oci.ocnosql.client.ClientRuntimeException;
-import com.ailk.oci.ocnosql.client.config.spi.CommonConstants;
+import com.ailk.oci.ocnosql.common.exception.ClientRuntimeException;
+import com.ailk.oci.ocnosql.common.util.CommonConstants;
 
 public class SingleHbasePutAutoTest {
 

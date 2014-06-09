@@ -1,10 +1,6 @@
 package com.ailk.oci.ocnosql.client.query.criterion;
 
-import java.text.ParseException;
 import java.util.*;
-
-import org.apache.commons.lang.time.DateUtils;
-
 import org.apache.hadoop.hbase.filter.Filter;
 import org.apache.hadoop.hbase.filter.FilterList;
 

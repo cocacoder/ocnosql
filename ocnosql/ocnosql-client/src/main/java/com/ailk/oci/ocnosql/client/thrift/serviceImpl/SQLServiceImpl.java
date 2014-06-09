@@ -1,10 +1,11 @@
 package com.ailk.oci.ocnosql.client.thrift.serviceImpl;
 
 import com.ailk.oci.ocnosql.client.jdbc.*;
-import com.ailk.oci.ocnosql.client.thrift.exception.*;
 import com.ailk.oci.ocnosql.client.thrift.exception.SQLException;
 import com.ailk.oci.ocnosql.client.thrift.service.*;
-import com.google.common.collect.*;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.thrift.*;
 
 import java.sql.*;
@@ -18,6 +19,7 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class SQLServiceImpl implements SQLService.Iface{
+	static Log LOG = LogFactory.getLog(SQLServiceImpl.class);
 
     HbaseJdbcHelper jdbcHelper;
 
@@ -31,10 +33,10 @@ public class SQLServiceImpl implements SQLService.Iface{
     @Override
     public int excuteNonQueryFir(String sql) throws SQLException, TException {
         try{
-            System.out.println("received sql = " + sql);
+            LOG.info("received sql = " + sql);
             return jdbcHelper.excuteNonQuery(sql);
         } catch (java.sql.SQLException e){
-            System.out.println("sql Exception = " + e.getMessage());
+            LOG.error("sql Exception = " + e.getMessage());
             throw new SQLException().setErrormessage(e.getMessage());
         }
     }

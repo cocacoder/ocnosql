@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>ocnosql</artifactId>
 		<groupId>com.ailk.oci</groupId>
-		<version>V01B07C02</version>
+		<version>V01B07C02-SNAPSHOT</version>
 	</parent>
-  <artifactId>ocnosql-tools</artifactId>
-  <name>ocnosql-tools</name>
-  <url>http://maven.apache.org</url>
-  	<properties>
+	<artifactId>ocnosql-tools</artifactId>
+	<name>ocnosql-tools</name>
+	<url>http://maven.apache.org</url>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 	<build>
-		<plugins> 
+		<plugins>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<executions>
@@ -31,7 +31,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.1</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
@@ -40,11 +39,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.1</version>
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com/ailk/oci/ocnosql/client/Driver</mainClass>
+							<mainClass>com/ailk/oci/ocnosql/tools/Driver</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -61,7 +59,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -78,16 +75,20 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+		<!-- <dependency>
+			<groupId>com.ailk.oci</groupId>
+			<artifactId>ocnosql-dao</artifactId>
+			<version>${project.version}</version>
+		</dependency> -->
 		<dependency>
+			<groupId>com.ailk.oci</groupId>
+			<artifactId>ocnosql-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- <dependency>
 			<groupId>com.ailk.oci</groupId>
 			<artifactId>ocnosql-client</artifactId>
 			<version>${project.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.hbase</groupId>
-			<artifactId>hbase</artifactId>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 </project>

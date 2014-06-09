@@ -33,7 +33,7 @@ public class ThriftServer {
             args.protocolFactory(protFactory);
             server = new TThreadPoolServer(args);
             registProcessor(processor);
-            System.out.println("server is listening 9091 port.");
+            log.info("server is listening 9091 port.");
             server.serve();
         } catch (TTransportException e) {
             log.error("transport error : ",e);

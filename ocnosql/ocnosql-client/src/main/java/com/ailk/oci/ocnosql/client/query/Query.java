@@ -2,9 +2,10 @@ package com.ailk.oci.ocnosql.client.query;
 
 import java.util.List;
 
-import com.ailk.oci.ocnosql.client.ClientRuntimeException;
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
+import com.ailk.oci.ocnosql.common.exception.ClientRuntimeException;
 import com.ailk.oci.ocnosql.client.query.criterion.Criterion;
+import com.ailk.oci.ocnosql.common.config.ColumnFamily;
+import com.ailk.oci.ocnosql.common.config.Connection;
 
 public interface Query {
 

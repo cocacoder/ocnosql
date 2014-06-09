@@ -1,11 +1,13 @@
 package com.ailk.oci.ocnosql.client.query;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NavigableMap;
 import java.util.concurrent.CountDownLatch;
 
-import com.ailk.oci.ocnosql.client.rowkeygenerator.*;
-import com.ailk.oci.ocnosql.common.util.PropertiesUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -21,15 +23,20 @@ import org.apache.hadoop.hbase.client.RetriesExhaustedException;
 import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.util.Bytes;
 
-import com.ailk.oci.ocnosql.client.ClientRuntimeException;
-import com.ailk.oci.ocnosql.client.cache.OciTableRef;
-import com.ailk.oci.ocnosql.client.cache.TableMetaCache;
-import com.ailk.oci.ocnosql.client.config.spi.CommonConstants;
 import com.ailk.oci.ocnosql.client.query.criterion.Criterion;
-import com.ailk.oci.ocnosql.client.query.schema.OCTable;
-import com.ailk.oci.ocnosql.client.spi.ClientConnectionException;
-import com.ailk.oci.ocnosql.client.spi.ConfigException;
 import com.ailk.oci.ocnosql.client.util.HTableUtils;
+import com.ailk.oci.ocnosql.common.config.ColumnFamily;
+import com.ailk.oci.ocnosql.common.config.OciTableRef;
+import com.ailk.oci.ocnosql.common.config.cache.TableMetaCache;
+import com.ailk.oci.ocnosql.common.config.query.schema.OCTable;
+import com.ailk.oci.ocnosql.common.exception.ClientConnectionException;
+import com.ailk.oci.ocnosql.common.exception.ClientRuntimeException;
+import com.ailk.oci.ocnosql.common.exception.ConfigException;
+import com.ailk.oci.ocnosql.common.exception.TableNotFoundException;
+import com.ailk.oci.ocnosql.common.rowkeygenerator.RowKeyGenerator;
+import com.ailk.oci.ocnosql.common.rowkeygenerator.RowKeyGeneratorHolder;
+import com.ailk.oci.ocnosql.common.util.CommonConstants;
+import com.ailk.oci.ocnosql.common.util.PropertiesUtil;
 
 /**
  * 功能：多列方式查询线程

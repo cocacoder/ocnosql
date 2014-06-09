@@ -17,7 +17,6 @@ public class TestDbPool {
 		
 		//先调用一下getConnection排除锁的干扰(第一次获取连接的时候会初始化线程池，所有线程都会等待的)
         long beginTime = System.currentTimeMillis();
-		Connection conn = DbPool.getConnection();
 		DbPool.closeConnection();
         long endTime = System.currentTimeMillis();
 					System.out.println("初始化连接池花费时间为:"

@@ -11,11 +11,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
 import com.ailk.oci.ocnosql.client.jdbc.HbaseJdbcHelper;
 import com.ailk.oci.ocnosql.client.jdbc.phoenix.PhoenixJdbcHelper;
-import com.ailk.oci.ocnosql.client.rowkeygenerator.GetRowKeyUtil;
 import com.ailk.oci.ocnosql.client.spi.ClientAdaptor;
+import com.ailk.oci.ocnosql.common.config.Connection;
+import com.ailk.oci.ocnosql.common.rowkeygenerator.GetRowKeyUtil;
 /**
  * Created by IntelliJ IDEA.
  * User: lile3

@@ -2,6 +2,8 @@
  * 
  */
 package com.ailk.oci.ocnosql.client.util;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HColumnDescriptor;
@@ -13,6 +15,7 @@ import org.junit.Test;
  * 
  */
 public class HbaseInit {
+	static Log LOG = LogFactory.getLog(HbaseInit.class);
 
 	@Test
 	public void createTestTable() {
@@ -22,7 +25,7 @@ public class HbaseInit {
 			Configuration conf = HBaseConfiguration.create();
 			HBaseAdmin admin = new HBaseAdmin(conf);
 			if (admin.tableExists(tableName)) {
-				System.err.println("table : " + tableName + " already exist.");
+				LOG.error("table : " + tableName + " already exist.");
 				return;
 			}
 			HTableDescriptor tableDesc = new HTableDescriptor(tableName);
@@ -30,11 +33,11 @@ public class HbaseInit {
 			tableDesc.addFamily(columnDesc);
 			admin.createTable(tableDesc);
 			admin.getTableDescriptor(tableName.getBytes()).toString();
-			System.out.println("table : " + tableName + " created sucessfully.");
+			LOG.info("table : " + tableName + " created sucessfully.");
 			
 			
 		} catch (Exception e) {
-			System.err.println("failed create region" + e);
+			LOG.error("failed create region" + e);
 		}
 		
 		/**

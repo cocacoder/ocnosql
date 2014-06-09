@@ -10,8 +10,11 @@
             <directory>src/main/bin/maintain</directory>
             <outputDirectory>maintain</outputDirectory>
         </fileSet>
-        
     </fileSets>
     <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <scope>runtime</scope>
+        </dependencySet>
     </dependencySets>
 </assembly>

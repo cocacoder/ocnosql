@@ -1,15 +1,12 @@
 package com.ailk.oci.ocnosql.common.util;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
-
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.time.DateUtils;
-import org.springframework.util.Assert;
+import org.apache.commons.lang3.time.*;
+import org.junit.*;
+
+
+import java.text.*;
+import java.util.*;
 
 public final class DateUtil {
 
@@ -30,8 +27,8 @@ public final class DateUtil {
 	 * @return Date
 	 */
 	public static Date stringToUtilDate(String str, String format) {
-		Assert.notNull(str,"param [str] not be null");
-		Assert.notNull(str,"param [format] not be null");
+		Assert.assertNotNull(str, "param [str] not be null");
+		Assert.assertNotNull(str,"param [format] not be null");
 		SimpleDateFormat sdf = new SimpleDateFormat(format);
 		Date date = null;
 		try {
@@ -76,7 +73,7 @@ public final class DateUtil {
 	}
 
 	public static Date getNextDate(Date date) {
-		Assert.notNull(date, "The date must not be null");
+		Assert.assertNotNull("The date must not be null", date);
 		return DateUtils.addDays(date, 1);
 	}
 
@@ -287,8 +284,8 @@ public final class DateUtil {
     	return timedifference/1000;
     }
     public static boolean validateDateFormat(String dateStr,String format){
-    	Assert.notNull(dateStr,"param [dateStr] not be null");
-		Assert.notNull(format,"param [format] not be null");
+    	Assert.assertNotNull("param [dateStr] not be null",dateStr);
+		Assert.assertNotNull("param [format] not be null",format);
         if(dateStr.length()!=format.length()){
         	return false;
         }

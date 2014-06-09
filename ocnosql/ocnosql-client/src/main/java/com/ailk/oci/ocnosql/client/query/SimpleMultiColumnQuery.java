@@ -14,11 +14,12 @@ import org.apache.hadoop.hbase.client.NoServerForRegionException;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.util.Bytes;
 
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
-import com.ailk.oci.ocnosql.client.query.schema.OCTable;
-import com.ailk.oci.ocnosql.client.rowkeygenerator.RowKeyGenerator;
-import com.ailk.oci.ocnosql.client.spi.ClientConnectionException;
+import com.ailk.oci.ocnosql.common.exception.ClientConnectionException;
+import com.ailk.oci.ocnosql.common.exception.TableNotFoundException;
 import com.ailk.oci.ocnosql.client.util.HTableUtilsV2;
+import com.ailk.oci.ocnosql.common.config.Connection;
+import com.ailk.oci.ocnosql.common.config.query.schema.OCTable;
+import com.ailk.oci.ocnosql.common.rowkeygenerator.RowKeyGenerator;
 
 public class SimpleMultiColumnQuery {
 	
@@ -62,7 +63,7 @@ public class SimpleMultiColumnQuery {
 		List<Result>  list = new ArrayList<Result>();
 		try {
 			table = HTableUtilsV2.getTable(hbaseConf, tablename);
-			RowKeyGenerator generator = com.ailk.oci.ocnosql.client.rowkeygenerator.RowKeyGeneratorHolder.resolveGenerator(rowkeyGenerator);
+			RowKeyGenerator generator = com.ailk.oci.ocnosql.common.rowkeygenerator.RowKeyGeneratorHolder.resolveGenerator(rowkeyGenerator);
 			if(generator!=null){
 				rowkey = (String) generator.generate(rowkey);
 			}

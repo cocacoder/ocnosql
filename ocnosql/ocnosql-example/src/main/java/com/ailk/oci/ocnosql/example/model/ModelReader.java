@@ -9,7 +9,6 @@ import org.apache.commons.lang3.*;
 import org.apache.commons.logging.*;
 import org.dom4j.*;
 import org.dom4j.io.*;
-import org.springframework.beans.factory.*;
 import org.springframework.core.io.*;
 import org.springframework.core.io.support.*;
 

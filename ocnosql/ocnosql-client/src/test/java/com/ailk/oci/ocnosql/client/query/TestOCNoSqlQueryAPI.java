@@ -15,8 +15,9 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
 import com.ailk.oci.ocnosql.client.spi.ClientAdaptor;
+import com.ailk.oci.ocnosql.common.config.ColumnFamily;
+import com.ailk.oci.ocnosql.common.config.Connection;
 
 /**
  * 

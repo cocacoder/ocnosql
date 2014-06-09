@@ -5,9 +5,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import com.ailk.oci.ocnosql.common.OCNosqlNestedRuntimeException;
-
 public class ParseUtil {
 
 	public static List<String> parse(String str){
@@ -26,7 +23,7 @@ public class ParseUtil {
 		for(int i = 0; i < tokens.size(); i++){
 			Integer columnIndex = columnIndexMap.get(tokens.get(i));
 			if(columnIndex == null){
-				throw new OCNosqlNestedRuntimeException("parse expression: '" + exp + "' exception, token: '" + tokens.get(i) + "' is not exsited in columnIndexMap.");
+				throw new RuntimeException("parse expression: '" + exp + "' exception, token: '" + tokens.get(i) + "' is not exsited in columnIndexMap.");
 			}
 			exp = exp.replace(tokens.get(i), record[columnIndex]);
 		}
@@ -37,7 +34,7 @@ public class ParseUtil {
 		for(int i = 0; i < tokens.size(); i++){
 			Integer columnIndex = columnIndexMap.get(tokens.get(i));
 			if(columnIndex == null){
-				throw new OCNosqlNestedRuntimeException("parse expression: '" + exp + "' exception, token: '" + tokens.get(i) + "' is not exsited in columnIndexMap.");
+				throw new RuntimeException("parse expression: '" + exp + "' exception, token: '" + tokens.get(i) + "' is not exsited in columnIndexMap.");
 			}
 			exp = exp.replace(tokens.get(i), record[columnIndex]);
 		}

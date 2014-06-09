@@ -1,0 +1,12 @@
+namenode
+0 0  * * * sh /home/ocnosql/tools/dailyTest/dailyMaintain.sh >>/home/ocnosql/tools/dailyTest/dailyMaintain.log 2>&1
+#39 13  * * * sh /home/ocnosql/tools/dailyTest/testdaily.sh >>/home/ocnosql/tools/dailyTest/tdaily.log 2>&1
+* * * * * . ~/.bash_profile; ~/bin/ha_regionserver_zkfc.sh
+
+datanode
+* * * * * . ~/.bash_profile; ~/bin/ha_check.sh
+
+webserver
+* * * * * /home/drquery/bin/keepapache.sh start >> /home/drquery/bin/logs/keepapache.log
+* * * * * /home/drquery/bin/keepapp.sh start >> /home/drquery/bin/logs/keepapp.log
+0 0 * * * sh /home/drquery/bin/compact_drquery.sh >> /home/drquery/bin/compact_log.log 2>&1

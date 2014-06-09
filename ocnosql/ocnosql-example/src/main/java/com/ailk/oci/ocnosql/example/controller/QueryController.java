@@ -1,31 +1,36 @@
 package com.ailk.oci.ocnosql.example.controller;
 
-import com.ailk.oci.ocnosql.client.config.spi.*;
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
-import com.ailk.oci.ocnosql.client.jdbc.*;
-import com.ailk.oci.ocnosql.client.jdbc.phoenix.*;
-import com.ailk.oci.ocnosql.client.query.criterion.*;
-import com.ailk.oci.ocnosql.client.spi.*;
-import com.ailk.oci.ocnosql.common.util.*;
-import com.ailk.oci.ocnosql.example.model.*;
-import org.apache.commons.httpclient.*;
-import org.apache.commons.lang.*;
-import org.apache.http.*;
-import org.apache.http.client.*;
-import org.apache.http.client.methods.*;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.*;
-import org.springframework.web.servlet.mvc.multiaction.*;
+import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.io.*;
-import java.sql.*;
-import java.text.*;
-import java.text.ParseException;
-import java.util.*;
-import java.util.Date;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+import com.ailk.oci.ocnosql.client.jdbc.HbaseJdbcHelper;
+import com.ailk.oci.ocnosql.client.jdbc.phoenix.PhoenixJdbcHelper;
+import com.ailk.oci.ocnosql.client.put.HBasePut;
+import com.ailk.oci.ocnosql.client.query.criterion.Criterion;
+import com.ailk.oci.ocnosql.client.spi.ClientAdaptor;
+import com.ailk.oci.ocnosql.common.config.Connection;
+import com.ailk.oci.ocnosql.common.util.CommonConstants;
+import com.ailk.oci.ocnosql.example.model.BusiModelReader;
+import com.ailk.oci.ocnosql.example.model.Field;
+import com.ailk.oci.ocnosql.example.model.MetaModel;
 
 /**
  * Created by IntelliJ IDEA.
@@ -37,6 +42,7 @@ import java.util.Date;
 @Controller
 @RequestMapping("/common")
 public class QueryController extends MultiActionController{
+	static Log LOG = LogFactory.getLog(QueryController.class);
 
     public static final String TABLENAME = "DR_QUERY_TEST";
 
@@ -111,7 +117,7 @@ public class QueryController extends MultiActionController{
         if(!StringUtils.isEmpty(appName)){
            sql = sql + " and APPNAME='weibo'";
         }
-        System.out.println("sql = " + sql);
+        LOG.info("sql = " + sql);
         List<Map<String,String>> result = null;
         try {
             result = loadDR(sql, null);
@@ -128,10 +134,8 @@ public class QueryController extends MultiActionController{
 
     //HBase API for put
     public void putByHBaseAPI(HttpServletRequest req,HttpServletResponse resp){
-       ClientAdaptor service = new ClientAdaptor();
        String tableName = req.getParameter(CommonConstants.TABLE_NAME);
        String records = req.getParameter("records");
-       String[] recordArr = StringUtils.splitByWholeSeparatorPreserveAllTokens(records,"|");
        Map map = new HashMap();
        Map paramMap = req.getParameterMap();
        Iterator<String> it = paramMap.keySet().iterator();
@@ -140,7 +144,10 @@ public class QueryController extends MultiActionController{
           Object value = paramMap.get(key);
           map.put(key,((String[])value)[0]);
        }
-       service.putData(tableName,recordArr,map);
+       HBasePut put=new HBasePut(tableName,map);
+       put.put(records);
+       
+       
     }
 
 

@@ -6,10 +6,8 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.client.HTable;
 import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.HTablePool;
-import org.apache.hadoop.hbase.util.Bytes;
 
-import com.ailk.oci.ocnosql.client.config.spi.Connection;
-import com.ailk.oci.ocnosql.common.util.PropertiesUtil;
+import com.ailk.oci.ocnosql.common.config.Connection;
 /**
  * wangyp5
  */

@@ -6,7 +6,6 @@ import org.apache.hadoop.hbase.client.HTablePool;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.PoolMap;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +28,6 @@ public class HTableUtilsV2 {
                 }
             }
         }
-        //System.out.println("=================25" + pool.getTable(tableName).getTableName());
         return pool.getTable(tableName);
     }
 
